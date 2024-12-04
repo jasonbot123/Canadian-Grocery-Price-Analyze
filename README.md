@@ -2,16 +2,15 @@
 
 ## Overview
 
-This repo provides students with a foundation for their own projects associated with *Telling Stories with Data*. You do not need every aspect for every paper and you should delete aspects that you do not need.
+This repository contains the analysis of grocery prices for breakfast staples—bacon, brown eggs, and bagels—collected from eight major Canadian grocery vendors. The study aims to identify which vendor offers the lowest prices, the most frequent discounts, and how pricing strategies vary across vendors. This analysis was conducted as part of Project Hammer, a broader initiative to foster competition and reduce potential collusion in the Canadian grocery sector.
 
-
+The originaldata is available here: https://jacobfilipp.com/hammer/
 ## File Structure
 
 The repo is structured as:
 
 -   `data/raw_data` contains the raw data as obtained from X.
 -   `data/analysis_data` contains the cleaned dataset that was constructed.
--   `model` contains fitted models. 
 -   `other` contains relevant literature, details about LLM chat interactions, and sketches.
 -   `paper` contains the files used to generate the paper, including the Quarto document and reference bibliography file, as well as the PDF of the paper. 
 -   `scripts` contains the R scripts used to simulate, download and clean data.
@@ -19,12 +18,5 @@ The repo is structured as:
 
 ## Statement on LLM usage
 
-Aspects of the code were written with the help of the auto-complete tool, Codriver. The abstract and introduction were written with the help of ChatHorse and the entire chat history is available in inputs/llms/usage.txt.
+The code in this repository was partially developed with the assistance of ChatGPT-4o. Specifically, the LLM was consulted during the data simulation process, for assistance with visualizations, and for refining some modeling approaches. Detailed transcripts of interactions with ChatGPT-4o are available in other/llm_usage. These records ensure transparency regarding the contributions of AI to this project.
 
-## Some checks
-
-- [ ] Change the rproj file name so that it's not starter_folder.Rproj
-- [ ] Change the README title so that it's not Starter folder
-- [ ] Remove files that you're not using
-- [ ] Update comments in R scripts
-- [ ] Remove this checklist

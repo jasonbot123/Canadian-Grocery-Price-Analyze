@@ -1,69 +1,70 @@
 #### Preamble ####
-# Purpose: Tests... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 26 September 2024 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Tests the Bacon, Brown Egg, and Bagel Data 
+# Author: Jason Yang 
+# Date: 03 December 2024 
+# Contact: jzc.yang@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: 
+# Any other information needed? Needs to have the cleaned data saved locally
 
 
 #### Workspace setup ####
 library(tidyverse)
+library(arrow)
 library(testthat)
 
-data <- read_csv("data/02-analysis_data/analysis_data.csv")
+brown_egg <- read_parquet(here::here("data/02-analysis_data/brown_egg.parquet"))
+bacon_data <- read_parquet(here::here("data/02-analysis_data/bacon_data.parquet"))
+most_common_bagel <- read_parquet(here::here("data/02-analysis_data/bagel.parquet"))
 
-
-#### Test data ####
-# Test that the dataset has 151 rows - there are 151 divisions in Australia
-test_that("dataset has 151 rows", {
-  expect_equal(nrow(analysis_data), 151)
+test_that("dataset has required columns", {
+  required_columns <- c("current_price", "old_price", "price_per_unit", "product_name", "nowtime", "units")
+  expect_true(all(required_columns %in% colnames(brown_egg)))
+})
+test_that("dataset has required columns", {
+  required_columns <- c("current_price", "old_price", "price_per_unit", "product_name", "nowtime", "units")
+  expect_true(all(required_columns %in% colnames(bacon_data)))
+})
+test_that("dataset has required columns", {
+  required_columns <- c("current_price", "old_price", "price_per_unit", "product_name", "nowtime", "units")
+  expect_true(all(required_columns %in% colnames(most_common_bagel)))
 })
 
-# Test that the dataset has 3 columns
-test_that("dataset has 3 columns", {
-  expect_equal(ncol(analysis_data), 3)
+test_that("No missing or invalid values in critical columns", {
+  # Check for missing values in essential columns
+  essential_columns <- c("current_price", "vendor", "old_price")
+  for (col in essential_columns) {
+    expect_true(all(!is.na(brown_egg[[col]])))
+  }
+  
+  # Check for invalid current_price (e.g., negative values)
+  expect_true(all(brown_egg$current_price > 0))
+  expect_true(all(brown_egg$old_price > 0))
 })
 
-# Test that the 'division' column is character type
-test_that("'division' is character", {
-  expect_type(analysis_data$division, "character")
+test_that("No missing or invalid values in critical columns", {
+  # Check for missing values in essential columns
+  essential_columns <- c("current_price", "vendor", "old_price")
+  for (col in essential_columns) {
+    expect_true(all(!is.na(bacon_data[[col]])))
+  }
+  
+  # Check for invalid current_price (e.g., negative values)
+  expect_true(all(bacon_data$current_price > 0))
+  expect_true(all(bacon_data$old_price > 0))
 })
 
-# Test that the 'party' column is character type
-test_that("'party' is character", {
-  expect_type(analysis_data$party, "character")
+test_that("No missing or invalid values in critical columns", {
+  # Check for missing values in essential columns
+  essential_columns <- c("current_price", "vendor", "old_price")
+  for (col in essential_columns) {
+    expect_true(all(!is.na(most_common_bagel[[col]])))
+  }
+  
+  # Check for invalid current_price (e.g., negative values)
+  expect_true(all(most_common_bagel$current_price > 0))
+  expect_true(all(most_common_bagel$old_price > 0))
 })
 
-# Test that the 'state' column is character type
-test_that("'state' is character", {
-  expect_type(analysis_data$state, "character")
-})
 
-# Test that there are no missing values in the dataset
-test_that("no missing values in dataset", {
-  expect_true(all(!is.na(analysis_data)))
-})
 
-# Test that 'division' contains unique values (no duplicates)
-test_that("'division' column contains unique values", {
-  expect_equal(length(unique(analysis_data$division)), 151)
-})
-
-# Test that 'state' contains only valid Australian state or territory names
-valid_states <- c("New South Wales", "Victoria", "Queensland", "South Australia", "Western Australia", 
-                  "Tasmania", "Northern Territory", "Australian Capital Territory")
-test_that("'state' contains valid Australian state names", {
-  expect_true(all(analysis_data$state %in% valid_states))
-})
-
-# Test that there are no empty strings in 'division', 'party', or 'state' columns
-test_that("no empty strings in 'division', 'party', or 'state' columns", {
-  expect_false(any(analysis_data$division == "" | analysis_data$party == "" | analysis_data$state == ""))
-})
-
-# Test that the 'party' column contains at least 2 unique values
-test_that("'party' column contains at least 2 unique values", {
-  expect_true(length(unique(analysis_data$party)) >= 2)
-})

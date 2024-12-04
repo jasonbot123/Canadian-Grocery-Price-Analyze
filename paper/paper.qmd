@@ -1,14 +1,13 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: "Unpacking Breakfast: A Vendor-Based Analysis of Bacon, Eggs, and Bagels"
 author: 
-  - First author
-  - Another author
-thanks: "Code and data are available at: [https://github.com/RohanAlexander/starter_folder](https://github.com/RohanAlexander/starter_folder)."
-date: today
+  - Jason Yang
+thanks: "Code and data are available at: (https://github.com/jasonbot123/Canadian-Grocery-Price-Analyze)."
+date: "`r format(Sys.Date(), '%A, %B %d, %Y')`"
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "This paper examines Canadian grocery prices for breakfast items (bacon, brown eggs, and bagels) across eight major vendors to identify which vendor offers the lowest prices and most frequent discounts. Using a dataset collected via web scraping, the study employs regression modeling to analyze vendor-specific prices, discount patterns, and seasonal trends. The findings reveal that TandT and Walmart consistently offer lower prices, while Metro provides the most frequent discounts, making it a strategic choice for cost-conscious consumers. These insights are valuable for helping families minimize grocery costs and informing policymakers aiming to foster competition and fairness in the Canadian grocery market. "
 format: pdf
+toc: true
 number-sections: true
 bibliography: references.bib
 ---
@@ -19,176 +18,418 @@ bibliography: references.bib
 #| message: false
 
 library(tidyverse)
-library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+library(rstanarm)
+library(Metrics)
+library(here)
+library(modelsummary)
+library(arrow)
+library(broom)
+library(kableExtra)
+```
+
+\newpage
+# Introduction
+
+Grocery prices are a significant concern for consumers, particularly in light of recent economic challenges such as inflation and supply chain disruptions. In Canada, the rising cost of food has sparked public debate and policy discussions about the competitiveness of grocery vendors and their pricing strategies. For everyday breakfast staples like bacon, brown eggs, and bagels, understanding how vendors price their products and offer discounts is crucial for empowering consumers to make cost-effective choices. While data on grocery pricing exists, it often lacks the granularity needed to provide actionable insights. This study aims to address these challenges by leveraging data from Project Hammer, a comprehensive dataset of breakfast item prices collected across eight major Canadian grocery vendors.
+
+This paper focuses on identifying which grocery vendor offers the lowest prices for breakfast items, analyzing pricing trends, discount patterns, and vendor-specific pricing strategies. Using a combination of observational data collected through web scraping and predictive modeling, this research fills a critical gap in the literature by providing a detailed comparison of grocery vendors' pricing behaviors. While existing studies often focus on general grocery pricing, few examine specific product categories or evaluate the role of discounts and seasonal trends in vendor choice. By narrowing the scope to breakfast items, this paper provides a focused and practical analysis relevant to both consumers and policymakers.
+
+To achieve this, the study employs regression modeling to predict prices based on factors such as vendor, old price, discount status, and temporal trends. The analysis reveals key insights, including which vendors consistently offer lower prices, how discounts impact consumer costs, and whether seasonal variations affect pricing. The findings indicate that vendors like TandT, Walmart, and Metro generally provide lower prices for breakfast staples, while Save-On-Foods tends to charge a premium. Additionally, Metro emerges as the vendor with the highest discount frequency, making it a strategic choice for budget-conscious consumers.
+
+The results of this study are important for several reasons. First, they offer practical recommendations for families looking to minimize grocery costs. Second, the analysis provides evidence to support policy interventions aimed at increasing competition and reducing potential collusion in the Canadian grocery sector. Lastly, the methodological framework, which integrates observational data with predictive modeling, can be applied to other product categories or markets.
+
+
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+brown_egg <- read_parquet(here::here("data/02-analysis_data/brown_egg.parquet"))
+bacon_data <- read_parquet(here::here("data/02-analysis_data/bacon_data.parquet"))
+most_common_bagel <- read_parquet(here::here("data/02-analysis_data/bagel.parquet"))
+
 ```
 
 
-# Introduction
+## Estimand paragraph
 
-Overview paragraph
-
-Estimand paragraph
-
-Results paragraph
-
-Why it matters paragraph
-
-Telegraphing paragraph: The remainder of this paper is structured as follows. @sec-data....
-
-
-
-
-
+The estimand in this paper is the prices of typical breakfast items. However, it is challenging to determine exactly what people regularly consume for breakfast, given the diversity of dietary preferences and cultural practices. To narrow the focus, this paper analyzes three widely recognized breakfast staples: brown eggs, bacon, and bagels. These items were selected because they represent a balance of commonality, affordability, and versatility in breakfast meals. By focusing on these products, the paper aims to provide insights into pricing patterns, vendor competition, and promotional strategies for breakfast essentials across the Canadian grocery market.
 
 # Data {#sec-data}
 
-## Overview
+## Data Source 
 
-We use the statistical programming language R [@citeR].... Our data [@shelter].... Following @tellingstories, we consider...
+This report leverages the dataset provided by Jacob Filipp for Project Hammer, focusing on analyzing grocery pricing trends,, vendor competition, and product availability. The dataset contains detailed information on products sold by Viola, T&T, Loblaws, No Frills, Metro, Galleria,, Walmart and Save-On-Foods. The dataset spans over a time period from February 28, 2024, to the latest load on November 26, 2024. The constant updated dataset allows for a robust time-based analysis of trends in grocery pricing, promotional activities, and stock availability. 
 
-Overview text
+### Features 
 
-## Measurement
+The original Canadian Grocery Price Data is provided in two CSV files: "hammer-4-product" and "hammer-4-raw". The "hammer-4-product" file contains metadata and product details, including variables such as id, vendor, concatted, units, product_name, and brand. The "hammer-4-raw" file contains time-series price data, with variables including nowtime, current_price, old_price, price_per_unit, other, and product_id. The two datasets were combined using the product_id variable, resulting in a merged dataset with 12,842,742 observations. The final dataset includes the following variables: nowtime, vendor, product_id, product_name, brand, units, current_price, old_price, price_per_unit, and other. The definition for these variables are shown in the appendix table (@tbl-feature).
+
+## Data Measurement 
+
+This information was obtained through a screen-scrape of website user interfaces, which limits the available data to what is displayed publicly. As a result, some information that might be accessible through internal APIs, such as detailed inventory data or more granular time stamps, is missing.  
+
+The unit of measurement for numerical data, such as current_price and old_price, is in Canadian Dollars (CAD). For price_per_unit, the units vary depending on the product type (e.g., per kilogram, gram, pound, or per item). Other data, such as vendor and product_name, are categorical features with no numerical units.
 	
-Some paragraphs about how we go from a phenomena in the world to an entry in the dataset.
+## Methodology 
 
-## Outcome variables
+The original dataset was provided in two CSV files, which were merged based on the columns product_id and id, as these columns uniquely identify individual products. The merged dataset that contains 12842742 observations is then filtered into three separate datasets for bacon, brown eggs, and everything bagel using the dplyr package (@dplyr). 
 
-Add graphs, tables and text. Use sub-sub-headings for each outcome variable or update the subheading to be singular.
+To address the issue of filtering product_name to include only bacon-related products (as this approach might inadvertently include items that contain bacon but are not the meat itself), we refined our method by excluding specific keywords that could misrepresent the data. These keywords include "dressing," "seasoning," "flavour," "snack," "Caesar," and similar terms. This approach was similarly applied to the brown egg dataset and the everything bagel dataset to ensure consistency and accuracy.
+
+The cleaned data was written and read using the write_parquet and read_parquet functions from the arrow library (@arrow). These functions enable efficient storage and retrieval of large datasets in the Parquet format, which is optimized for performance and storage. Other libraries like tidyverse (@tidyverse), ggplot2 (@ggplot2), rstanarm (@rstanarm), here (@here), modelsummary (@summary), broom (@broom), kableExtra (@kable), and Metrics (@Metrics) was used for statistical analyzing. 
 
 
 
-Some of our data is of penguins (@fig-bills), from @palmerpenguins.
-
-```{r}
-#| label: fig-bills
-#| fig-cap: Bills of penguins
-#| echo: false
-
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = "none") +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
-```
-
-Talk more about it.
-
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
+## Data Visualization
 
 ```{r}
-#| label: fig-planes
-#| fig-cap: Relationship between wing length and width
+#| label: fig-Price
+#| layout-ncol: 2
+#| fig-cap: ["Average Bacon Price by Vendors.", 
+#|           "Average Bagels Price by Vendors.",
+#|           "Average Brown Eggs Price by Vendors."]
 #| echo: false
 #| warning: false
 #| message: false
 
-analysis_data <- read_csv(here::here("data/02-analysis_data/analysis_data.csv"))
+avg_baconprice_by_vendor <- bacon_data %>% 
+  group_by(vendor) %>%
+  summarise(avg_price_by_vendor = mean(current_price, na.rm = TRUE))
 
-analysis_data |> 
-  ggplot(aes(x = width, y = length)) +
-  geom_point(alpha = 0.8) +
+
+avg_BEprice_by_vendor <- brown_egg %>% 
+  group_by(vendor) %>%
+  summarise(avg_price_by_vendor = mean(current_price, na.rm = TRUE))
+
+
+avg_bagelprice_by_vendor <- most_common_bagel %>% 
+  group_by(vendor) %>%
+  summarise(avg_price_by_vendor = mean(current_price, na.rm = TRUE))
+
+ggplot(avg_baconprice_by_vendor, aes(x = vendor, y = avg_price_by_vendor, fill = vendor)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  labs(
+    title = "Average Bacon Price by Vendor",
+    x = "Vendor",
+    y = "Average Price",
+    fill = "Vendor"
+  ) +
   theme_minimal() +
-  labs(x = "Wing width (mm)",
-       y = "Wing length (mm)")
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+ggplot(avg_bagelprice_by_vendor, aes(x = vendor, y = avg_price_by_vendor, fill = vendor)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  labs(
+    title = "Average Bagel Price by Vendor",
+    x = "Vendor",
+    y = "Average Price",
+    fill = "Vendor"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+ggplot(avg_BEprice_by_vendor, aes(x = vendor, y = avg_price_by_vendor, fill = vendor)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  labs(
+    title = "Average Brown Egg Price by Vendor",
+    x = "Vendor",
+    y = "Average Price",
+    fill = "Vendor"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+
+```
+```{r}
+#| label: fig-discount
+#| layout-ncol: 2
+#| fig-cap: ["Discounts Freq for Bacon by vendors.",
+#|           "Discounts Freq for Brown Eggs by vendors.",
+#|           "Discounts Freq for Bagels by vendors."]
+#| echo: false
+#| warning: false
+#| message: false
+
+Bacon_discount_frequency <- bacon_data %>%
+  filter(!is.na(old_price) & old_price > current_price) %>%
+  group_by(vendor) %>%
+  summarise(discount_count = n())
+
+Egg_discount_frequency <- brown_egg %>%
+  filter(!is.na(old_price) & old_price > current_price) %>%
+  group_by(vendor) %>%
+  summarise(discount_count = n())
+
+Bagel_discount_frequency <- most_common_bagel %>%
+  filter(!is.na(old_price) & old_price > current_price) %>%
+  group_by(vendor) %>%
+  summarise(discount_count = n())
+
+ggplot(Bacon_discount_frequency, aes(x = vendor, y = discount_count, fill = vendor)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  labs(
+    title = "Bacon Discount Frequency by Vendor",
+    x = "Vendor",
+    y = "Discount count",
+    fill = "Vendor"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+ggplot(Egg_discount_frequency, aes(x = vendor, y = discount_count, fill = vendor)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  labs(
+    title = "Brown Egg Discount Frequency by Vendor",
+    x = "Vendor",
+    y = "Discount Count",
+    fill = "Vendor"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+ggplot(Bagel_discount_frequency, aes(x = vendor, y = discount_count, fill = vendor)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  labs(
+    title = "Bagel Discount Frequency by Vendor",
+    x = "Vendor",
+    y = "Discount Count",
+    fill = "Vendor"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+```{r}
+#| label: fig-trend
+#| fig-cap: ["Bagel Trend for Current and Old Prices.",
+#|           "Bacon Trend for Current and Old Prices",
+#|           "Brown Eggs Trend for Current and Old Prices."]
+#| echo: false
+#| warning: false
+#| message: false
+
+ggplot(most_common_bagel, aes(x = nowtime)) +
+  geom_smooth(aes(y = current_price, color = "Current Price"), method = "loess", span = 0.2, se = FALSE) +
+  geom_smooth(aes(y = old_price, color = "Old Price"), method = "loess", span = 0.2, linetype = "dashed", se = FALSE) +
+  labs(
+    title = "Bagel Price Trends",
+    x = "Time",
+    y = "Price",
+    color = "Price Type"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "top"
+  )
+
+ggplot(bacon_data, aes(x = nowtime)) +
+  geom_smooth(aes(y = current_price, color = "Current Price"), method = "loess", span = 0.2, se = FALSE) +
+  geom_smooth(aes(y = old_price, color = "Old Price"), method = "loess", span = 0.2, linetype = "dashed", se = FALSE) +
+  labs(
+    title = "Bacon Price Trends",
+    x = "Time",
+    y = "Price",
+    color = "Price Type"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "top"
+  )
+
+ggplot(brown_egg, aes(x = nowtime)) +
+  geom_smooth(aes(y = current_price, color = "Current Price"), method = "loess", span = 0.2, se = FALSE) +
+  geom_smooth(aes(y = old_price, color = "Old Price"), method = "loess", span = 0.2, linetype = "dashed", se = FALSE) +
+  labs(
+    title = "Brown Eggs Price Trends",
+    x = "Time",
+    y = "Price",
+    color = "Price Type"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "top"
+  )
+
 ```
 
-Talk way more about it. 
-
-## Predictor variables
-
-Add graphs, tables and text.
-
-Use sub-sub-headings for each outcome variable and feel free to combine a few into one if they go together naturally.
 
 
-
-
-
-
+\newpage
 
 
 # Model
 
-The goal of our modelling strategy is twofold. Firstly,...
 
-Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
+In our analysis, we utilized a linear regression model to predict the price of breakfast items based on predictor variables such as vendor, old_price, discount status, and month.
 
 ## Model set-up
 
-Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
+The model is formulated as follows: 
 
-\begin{align} 
-y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
-\mu_i &= \alpha + \beta_i + \gamma_i\\
-\alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta &\sim \mbox{Normal}(0, 2.5) \\
-\gamma &\sim \mbox{Normal}(0, 2.5) \\
-\sigma &\sim \mbox{Exponential}(1)
+\
+\begin{align}
+y_i &= \beta_0 + \beta_1 (\text{vendor}) + \beta_2 (\text{old\_price}) \\
+    &\quad + \beta_3 (\text{discounted}) +  \beta_4(\text{month}) + \epsilon
 \end{align}
+\
 
-We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
+In this model, $y_i$ represents the current_price of breakfast items, which is the dependent variable we aim to predict and analyze. This regression model estimates the current_price of breakfast items using key product and vendor characteristics as predictors. The model includes four predictor variables: vendor, old_price, month, and discounted. 
+
+The variable vendor captures pricing variations across different grocery chains, allowing for an evaluation of vendor-specific pricing. old_price, which represents the previous price of the product, is a crucial predictor for understanding the relationship between historical and current pricing trends. The variable month, a time-based factor, accounts for potential monthly pricing patterns, such as increased prices during holiday seasons or seasonal promotions. Lastly, the binary variable discounted indicates whether an item is currently on sale, capturing the average price reduction associated with discounts.
+
+This regression model not only helps to predict prices but also serves as a tool for understanding pricing dynamics in the grocery market. It offers actionable insights into how vendors, historical prices, time factors, and promotional discounts influence the cost of breakfast essentials.
 
 
-### Model justification
+The model is implemented using R (@citeR), utilizing the lm() function for linear regression. Preprocessing of the data is performed using the dplyr package. Visualizations and diagnostics are created using ggplot2.
 
-We expect a positive relationship between the size of the wings and time spent aloft. In particular...
 
-We can use maths by including latex between dollar signs, for instance $\theta$.
+```{r}
+#| fig-width: 8
+#| fig-height: 5
+#| echo: false
+#| warning: false
+#| message: false
+# Bacon
+bacon_model_data <- bacon_data %>%
+  mutate(
+    discounted = ifelse(old_price > current_price, 1, 0),
+    month = as.factor(format(as.Date(nowtime), "%m"))
+  )
 
+# Fit the linear model for Bacon Data 
+bacon_model <- lm(current_price ~ old_price + vendor + discounted + month, data = bacon_model_data)
+
+# Add predicted prices to the dataset
+bacon_model_data <- bacon_model_data %>%
+  mutate(predicted_price = predict(bacon_model, newdata = bacon_model_data))
+
+# Plot Actual vs Predicted Prices
+ggplot(bacon_model_data, aes(x = current_price, y = predicted_price)) +
+  geom_point(alpha = 0.5, color = "blue") +  # Scatter points
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "red") +  # Perfect prediction line
+  labs(
+    title = "Bacon Actual vs Predicted Prices",
+    x = "Actual Price",
+    y = "Predicted Price"
+  ) +
+  theme_minimal()
+
+# Brown Eggs
+Egg_model_data <- brown_egg %>%
+  mutate(
+    discounted = ifelse(old_price > current_price, 1, 0),
+    month = as.factor(format(as.Date(nowtime), "%m"))
+  )
+# Fit the linear model for Brown Egg Data 
+Egg_model <- lm(current_price ~ old_price + vendor + discounted + month, data = Egg_model_data)
+
+
+# Add predicted prices to the dataset
+Egg_model_data <- Egg_model_data %>%
+  mutate(predicted_price = predict(Egg_model, newdata = Egg_model_data))
+
+# Plot Actual vs Predicted Prices
+ggplot(Egg_model_data, aes(x = current_price, y = predicted_price)) +
+  geom_point(alpha = 0.5, color = "blue") +  # Scatter points
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "red") +  # Perfect prediction line
+  labs(
+    title = "Brown Egg Actual vs Predicted Prices",
+    x = "Actual Price",
+    y = "Predicted Price"
+  ) +
+  theme_minimal()
+
+# Everything Bagels
+Bagel_model_data <- most_common_bagel %>%
+  mutate(
+    discounted = ifelse(old_price > current_price, 1, 0),
+    month = as.factor(format(as.Date(nowtime), "%m"))
+  )
+# Fit the linear model for Brown Egg Data 
+Bagel_model <- lm(current_price ~ old_price + vendor + discounted + month, data = Bagel_model_data)
+
+
+# Add predicted prices to the dataset
+Bagel_model_data <- Bagel_model_data %>%
+  mutate(predicted_price = predict(Bagel_model, newdata = Bagel_model_data))
+
+# Plot Actual vs Predicted Prices
+ggplot(Bagel_model_data, aes(x = current_price, y = predicted_price)) +
+  geom_point(alpha = 0.5, color = "blue") +  # Scatter points
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "red") +  # Perfect prediction line
+  labs(
+    title = "Bagel Actual vs Predicted Prices",
+    x = "Actual Price",
+    y = "Predicted Price"
+  ) +
+  theme_minimal()
+
+ 
+
+```
+
+
+## Model justification
+
+A regression model is appropriate for this analysis because it allows us to quantify the relationships between the response variable (current_price) and multiple predictor variables (vendor, old_price, month, and discounted). Regression analysis is particularly well-suited for predicting continuous outcomes, such as prices, while simultaneously evaluating the impact of multiple predictors. By using this approach, we can not only predict the current_price of breakfast items but also understand the relative importance of the factors driving price variation. 
+
+By using a linear regression model, we are assuming there is a linear relationship between current_price and predictors. While this may oversimplify certain relationships, it provides the general baseline for this analysis. Additionally, the observation are assumed to be independent, meaning the collection of one observation does not affect the chances of another observation being chosen. Lastly, the residuals are assumed to be normally distributed with constant variance. 
+
+In the raw data, many old_price values were empty or NA due to the absence of sales. During the data cleaning process, these missing old_price values were replaced with the corresponding current_price values. This decision ensures consistency and preserves the observations for analysis. For our assumptions, we treat these replaced values as representative for predictive analysis, assumptions stands. This approach aligns with the primary goal of the study: to identify the months and vendors offering the lowest prices for breakfast items. By retaining these observations, the model can provide a comprehensive understanding of pricing trends across different vendors and time periods while maintaining a sufficient sample size for analysis.
 
 # Results
 
-Our results are summarized in @tbl-modelresults.
+The results for the regression models analyzing the prices of bacon, brown eggs, and bagels are summarized in Tables @tbl-bacon-summary, @tbl-egg-summary, and @tbl-bagel-summary, respectively. 
 
-```{r}
-#| echo: false
-#| eval: true
-#| warning: false
-#| message: false
+The regression model for bacon indicates that old_price, vendor, and discounted significantly influence the current_price. For the regression model, the coefficient produced for each variable shows that old_price indicates a strong positive relationship between old_price and current_price. 
 
-library(rstanarm)
+The impact of discounts (discounted) was also significant in all models, with discounts consistently associated with lower prices. In the bacon model, discounted products were priced $2.367 lower on average, while discounts reduced brown egg prices by $1.056  and bagel prices by $1.331. These findings emphasize the substantial role of discounts in determining grocery pricing.
 
-first_model <-
-  readRDS(file = here::here("models/first_model.rds"))
-```
+Vendor effects varied across products. For bacon, Metro, NoFrills, TandT, Voila, and Walmart had significantly lower prices compared to the baseline vendor, with price reductions ranging from $0.420 for Metro to $0.135 for Walmart. Save-On-Foods, however, had higher prices, with a coefficient of 0.264. Similar trends were observed in the brown egg and bagel models, where TandT and Walmart consistently exhibited lower prices relative to the baseline vendor. Save-On-Foods continued to charge slightly higher prices for brown eggs, while its effect for bagels was not significant. This is reflected by the Figure 1, 2, and 3 as it shows Save-On-Foods has an higher average price across the three breakfast items compared to other vendors.
 
-```{r}
-#| echo: false
-#| eval: true
-#| label: tbl-modelresults
-#| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
-#| warning: false
+The variable month was included in the models to capture potential seasonal trends. For bacon and bagels, none of the monthly indicators were statistically significant, suggesting no meaningful seasonal variations in prices. However, in the brown egg model, certain months, such as May and October, showed small but significant price reductions, indicating minor seasonal effects on egg pricing.
 
-modelsummary::modelsummary(
-  list(
-    "First model" = first_model
-  ),
-  statistic = "mad",
-  fmt = 2
-)
-```
-
-
+In summary, the regression models demonstrate that old prices and discounts are the strongest and most consistent predictors of current prices across all three product categories. Vendor effects reveal significant price variations, with TandT and Walmart generally offering lower prices and Save-On-Foods often charging a premium. While seasonal effects were minimal for bacon and bagels, slight trends were observed in egg pricing, particularly in certain months.
 
 
 # Discussion
 
-## First discussion point {#sec-first-point}
+## Which Grocer to Choose? {#sec-first-point}
 
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+Which grocer is generally the cheapest for breakfast items like Bacon, Brown Eggs, and Bagels? Where should families buy breakfast items for the lowest price? Based on simple data visualization on these items, we can see that they are on average around the same price across the 8 vendors, with slight variation. However, for Bacon and Bagels, Save-On-Foods consistently exhibits higher average prices for bacon and bagels compared to other grocers. In contrast, TandT, WalMart, and NoFrills tend to offer lower prices, making them more budget-friendly options for families purchasing breakfast staples. 
 
-## Second discussion point
+Additionally, Metro tends to offer the most deals for breakfast items compared to other grocers, as reflected in Figures 4, 5, and 6. Metro has a significantly higher discount frequency for bacon and bagels than other grocers, making it an excellent choice for budget-conscious families looking for deals on these items. For brown eggs, however, Voila and TandT show more frequent discounts than Metro.
 
-Please don't use these as sub-heading labels - change them to be what your point actually is.
+That said, if families prefer to avoid the hassle of shopping at multiple grocers for different items, Metro emerges as the best all-around option. It combines frequent discounts with competitive average prices across bacon, brown eggs, and bagels, making it a convenient and cost-effective choice for families seeking to save on breakfast staples.
 
-## Third discussion point
+These claims are further supported by the regression models, which indicate that Metro and other vendors such as TandT and Walmart consistently had significantly lower prices compared to grocers like Loblaws and Save-On-Foods. For instance, in the regression results for bacon and bagels, Metro demonstrated significantly reduced prices relative to the baseline vendor. Meanwhile, Save-On-Foods exhibited higher average prices, particularly for bacon and bagels, reaffirming its role as a more premium-priced option.
 
-## Weaknesses and next steps
+Moreover, the model highlights the influence of discounts on pricing, with discounted items showing substantial price reductions across all products. Metro’s higher discount frequency for bacon and bagels, along with its relatively low average prices, makes it a standout option for budget-conscious families.
 
-Weaknesses and next steps should also be included.
+When considering the combined effect of discounts, vendor pricing strategies, and convenience, Metro remains the optimal choice for families aiming to purchase all breakfast items—bacon, brown eggs, and bagels—at a single store while benefiting from competitive pricing and frequent deals. However, families with specific preferences for brown eggs or bagels may still find TandT or Walmart as appealing alternatives for targeted savings.
+
+
+## Limitations and Weaknesses 
+
+A significant portion of the old_price column was missing or left blank due to the absence of sales. These missing values were replaced with current_price, under the assumption that items without an old_price were sold at their regular price. While this approach ensures completeness of the dataset, it may oversimplify real-world pricing dynamics, as the absence of a sale does not necessarily mean that old_price and current_price are identical.
+
+The regression models focused on a select few predictors—old_price, vendor, discounted, and month. While these variables capture key aspects of pricing behavior, other potentially relevant factors, such as product brand, regional differences, or marketing promotions, were not included. Their exclusion may limit the model’s ability to fully explain price variability.
+
+The dataset represents a snapshot of grocery prices in a specific geographic and temporal context, spanning February 2024 to November 2024. Pricing dynamics in other regions, time periods, or under different economic conditions (e.g., inflation, supply chain disruptions) may differ significantly, limiting the applicability of these findings to broader contexts.
+
+## Future Steps
+
+Future research should consider incorporating additional predictors, such as brand or geographic location, to enhance the models' accuracy. However, analyzing all brands for bacon may over complicate the modeling process. Instead, future studies could focus on specific brands that are particularly popular among consumers. Data on preferred  brands could be gathered through surveys, which would provide valuable insights into consumer preferences. This approach is similar to the methodology applied to the bagel data in this study. The selection of bagels for analysis was informed by examining product names and identifying trends in popularity, such as the prevalence of "everything bagel" products across vendors.
+
+In addition, future research could broaden the scope of analysis by including more granular data, such as daily price changes and more specific time frames. This would enable a deeper understanding of temporal pricing trends and discount patterns, capturing dynamic fluctuations that occur over shorter periods. Such advancements would provide a more nuanced perspective on grocery pricing behavior and offer greater value for both researchers and consumers.
 
 \newpage
 
@@ -196,58 +437,138 @@ Weaknesses and next steps should also be included.
 
 # Appendix {-}
 
+# Data 
 
-# Additional data details
+## Data Feature
+
+@tbl-feature shows the variable features of the Canadian Grocery Price Data 
+
+```{r fig.pos="h"}
+#| label: tbl-feature
+#| tbl-cap: "Selected feature of the Grocery dataset"
+#| message: false
+#| echo: false
+#| warning: false
+
+# show data feature
+feature <- tibble(
+  Data_feature = c("nowtime", "vendor", "product_id", "product_name", "brand", "units", "current_price", "old_price", "other"),
+  Data_definition = c("Timestamp indicating when the data was gathered.", "One of the 7 grocery vendors (Voila, T&T, Loblaws, No Frills, Metro, Galleria, Walmart Canada, Save-On-Foods).", "An internal ID for a product - it represents 1 unique product at 1 vendor. It will allow you to track prices on the same product over time.", "Name of the Product.", "Name of the Product Brand.", "Units (grams, kg, number of items in package).", "Price at time of extract.", "An old struck-out price.", "Other details that appeared on the listing. (Out of Stock, SALE, Best Sellet, Low on Stock, $5.00 MIN 2).")
+)
+kable(feature, "latex") %>%
+  column_spec(2, width = "30em")
+```
 
 # Model details {#sec-model-details}
 
-## Posterior predictive check
-
-In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows...
-
-In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
+## Model Summaries 
 
 ```{r}
-#| eval: true
-#| echo: false
+#| label: tbl-bacon-summary
+#| tbl-cap: "Summary of the Bacon Regression Model"
 #| message: false
-#| warning: false
-#| label: fig-ppcheckandposteriorvsprior
-#| layout-ncol: 2
-#| fig-cap: "Examining how the model fits, and is affected by, the data"
-#| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
+#| echo: false
+bacon_model_summary <- tidy(bacon_model)
 
-pp_check(first_model) +
-  theme_classic() +
-  theme(legend.position = "bottom")
-
-posterior_vs_prior(first_model) +
-  theme_minimal() +
-  scale_color_brewer(palette = "Set1") +
-  theme(legend.position = "bottom") +
-  coord_flip()
+# Create a visually appealing table using kableExtra
+bacon_model_summary %>%
+  mutate(
+    estimate = round(estimate, 3),
+    std.error = round(std.error, 3),
+    statistic = round(statistic, 3),
+    p.value = ifelse(p.value < 0.001, "< 0.001", round(p.value, 3))
+  ) %>%  # Format numbers for clarity
+  kbl(
+    col.names = c("Term", "Estimate", "Std. Error", "t Value", "p Value"),
+    align = "c"
+  ) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = FALSE
+  )
 ```
-
-## Diagnostics
-
-@fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
-
-@fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
 
 ```{r}
-#| echo: false
-#| eval: true
+#| label: tbl-egg-summary
+#| tbl-cap: "Summary of the Brown Eggs Regression Model"
 #| message: false
-#| warning: false
-#| label: fig-stanareyouokay
-#| fig-cap: "Checking the convergence of the MCMC algorithm"
-#| fig-subcap: ["Trace plot", "Rhat plot"]
-#| layout-ncol: 2
+#| echo: false
+Egg_model_summary <- tidy(Egg_model)
 
-plot(first_model, "trace")
-
-plot(first_model, "rhat")
+# Create a visually appealing table using kableExtra
+Egg_model_summary %>%
+  mutate(
+    estimate = round(estimate, 3),
+    std.error = round(std.error, 3),
+    statistic = round(statistic, 3),
+    p.value = ifelse(p.value < 0.001, "< 0.001", round(p.value, 3))
+  ) %>%  # Format numbers for clarity
+  kbl(
+    col.names = c("Term", "Estimate", "Std. Error", "t Value", "p Value"),
+    align = "c"
+  ) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = FALSE
+  )
 ```
+
+```{r}
+#| label: tbl-bagel-summary
+#| tbl-cap: "Summary of the Bagel Regression Model"
+#| message: false
+#| echo: false
+Bagel_model_summary <- tidy(Bagel_model)
+
+# Create a visually appealing table using kableExtra
+Bagel_model_summary %>%
+  mutate(
+    estimate = round(estimate, 3),
+    std.error = round(std.error, 3),
+    statistic = round(statistic, 3),
+    p.value = ifelse(p.value < 0.001, "< 0.001", round(p.value, 3))
+  ) %>%  # Format numbers for clarity
+  kbl(
+    col.names = c("Term", "Estimate", "Std. Error", "t Value", "p Value"),
+    align = "c"
+  ) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = FALSE
+  )
+```
+
+\newpage
+
+## Surveys, Sampling, and Observational Data 
+
+The research question focuses on identifying which vendor offers the lowest prices for breakfast items—bacon, brown eggs, and bagels—across eight Canadian grocery vendors. While the observational data collected through screen-scraping provides a foundation understanding of pricing trends, incorporating survey data could address some gaps and enhance the analysis. Surveys could capture consumer preferences, purchasing behaviors, and perceptions that are not directly observable in the scraped data, offering complementary insights into vendor choice and its relationship to pricing strategies.
+
+### Surveys as an Additional Data Source 
+
+If provided with a $100,000 budget to incorporate surveys as a complementary method alongside observational data collected through screen-scraping, the funds could be used to gain valuable insights into consumer preferences, behaviors, and perceptions that are not directly observable from grocery websites. Surveys could be designed to ask respondents to rank their preferred brands of bacon, bagels, and eggs, providing a clearer picture of demand-side dynamics. Furthermore, surveys could investigate the factors driving vendor choice, such as proximity, price, or product quality, offering a deeper understanding of pricing patterns observed in the dataset. This integration of consumer insights would enhance the analysis by bridging the gap between observed prices and the underlying consumer behaviors shaping them. Lastly, the survey can collect information on whether consumers prefer to purchase all breakfast items from a single vendor or shop at multiple stores to secure better deals. This data would help explore consumer behavior related to convenience versus cost savings, including their willingness to travel farther for lower prices. Additionally, this investigation would provide insights into the influence of vendor location on consumer choices, highlighting how proximity impacts shopping decisions alongside pricing strategies. The budget could also be utilized to purchase discount coupons from all eight vendors and offer them to respondents, allowing for an experimental approach to validate their stated preferences. By observing which vendor respondents are most likely to choose when presented with equivalent discounts, the study can confirm whether their answers about preferred vendors are consistent with actual behavior. This method would help mitigate potential biases introduced by self-reported preferences, ensuring that the survey findings are more reliable and reflective of true consumer decision-making.
+
+
+### Proposed Survey Methodology 
+
+Sample Questions:
+
+1. *Which vendor do you typically shop at for breakfast items like brown eggs, bagels, and bacon.*
+2. *Which brands do you prefer for these items?*
+3. *What makes you want to shop at these vendors? Is it because of convenience?*
+4. *Would you travel to a different store if it offered a 10% discount on breakfast items?* 
+
+Our target population are Canadian consumers who shop for groceries, ideally spanning diverse demographics (e.g.,, age, income levels, geographic locations). For sampling, we are going to use a stratified random sampling approach to ensure representation from various regions and consumer groups. A sample size of at least 1,000 respondents for the best representation. 
+
+We will employ a combination of online survey panels, social media outreach, and targeted telephone recruitment to ensure broad participation and accessibility, particularly for harder-to-reach demographics such as older adults and rural residents. These methods are tailored to include individuals who typically drive to grocery stores for their shopping. For example, the survey will explore whether consumers are willing to drive an additional 5 kilometers (e.g., from a store 20 km away to one 25 km away) in exchange for a 10% discount. This approach will help assess the trade-offs consumers make between convenience and cost savings, offering valuable insights into the role of location in grocery vendor choice.
+
+
+### Challenges and Considerations 
+
+Responses may still be subject to social desirability bias, where participants report what they believe to be the "correct" answer rather than their actual behavior. Additionally, since the dataset only includes eight vendors, there is the possibility that respondents may shop at other grocery stores not included in the dataset, such as Costco or smaller, independent retailers. This limitation highlights the potential for unrepresented vendor preferences and behaviors that could influence the overall findings.
+To address these gaps, the survey could include open-ended questions ask participants to name additional vendors they visit for breakfast items. 
+
+As a result, if respondents’ preferred vendor is not among the eight vendors listed in the dataset, they will still be eligible to receive gift cards as prizes for completing the survey. This approach ensures that respondents are not incentivized to provide biased answers by selecting a vendor from the list solely to receive a discount coupon. By decoupling the reward from the vendor selection, this strategy minimizes response bias and encourages participants to answer questions honestly, even if their preferred vendor is not represented in the dataset. This not only enhances the reliability of the survey data but also acknowledges the diversity of grocery shopping preferences.
 
 
 

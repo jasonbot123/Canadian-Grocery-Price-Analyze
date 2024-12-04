@@ -1,152 +1,1001 @@
-division,state,party
-Division 1,Victoria,Liberal
-Division 2,New South Wales,Liberal
-Division 3,Tasmania,Liberal
-Division 4,New South Wales,Liberal
-Division 5,Queensland,Liberal
-Division 6,New South Wales,Labor
-Division 7,Victoria,Liberal
-Division 8,Western Australia,Labor
-Division 9,Western Australia,Greens
-Division 10,Queensland,Labor
-Division 11,Queensland,Labor
-Division 12,Northern Territory,Liberal
-Division 13,New South Wales,Labor
-Division 14,Western Australia,Labor
-Division 15,Western Australia,National
-Division 16,Victoria,Liberal
-Division 17,South Australia,Liberal
-Division 18,Victoria,Liberal
-Division 19,Western Australia,Labor
-Division 20,South Australia,Labor
-Division 21,New South Wales,Liberal
-Division 22,Queensland,Greens
-Division 23,New South Wales,Liberal
-Division 24,New South Wales,Liberal
-Division 25,Queensland,Labor
-Division 26,Victoria,National
-Division 27,New South Wales,Liberal
-Division 28,Queensland,Liberal
-Division 29,Tasmania,Liberal
-Division 30,South Australia,Liberal
-Division 31,New South Wales,Liberal
-Division 32,Victoria,Labor
-Division 33,Tasmania,Liberal
-Division 34,New South Wales,Liberal
-Division 35,Western Australia,Labor
-Division 36,New South Wales,Liberal
-Division 37,Tasmania,Greens
-Division 38,Tasmania,Labor
-Division 39,Victoria,Greens
-Division 40,South Australia,Labor
-Division 41,New South Wales,Other
-Division 42,New South Wales,Other
-Division 43,Tasmania,Labor
-Division 44,Tasmania,National
-Division 45,Queensland,Liberal
-Division 46,Australian Capital Territory,Other
-Division 47,Queensland,Labor
-Division 48,Queensland,Other
-Division 49,South Australia,Liberal
-Division 50,Victoria,National
-Division 51,South Australia,Liberal
-Division 52,Victoria,Labor
-Division 53,South Australia,National
-Division 54,Queensland,Liberal
-Division 55,Queensland,Labor
-Division 56,South Australia,Liberal
-Division 57,New South Wales,Other
-Division 58,Northern Territory,Liberal
-Division 59,New South Wales,Labor
-Division 60,Western Australia,Labor
-Division 61,New South Wales,Liberal
-Division 62,South Australia,Liberal
-Division 63,Queensland,Labor
-Division 64,Tasmania,Labor
-Division 65,South Australia,Labor
-Division 66,Victoria,Labor
-Division 67,Queensland,Liberal
-Division 68,Queensland,Liberal
-Division 69,Tasmania,Labor
-Division 70,South Australia,National
-Division 71,Australian Capital Territory,Labor
-Division 72,Western Australia,Labor
-Division 73,Queensland,National
-Division 74,Victoria,Labor
-Division 75,Western Australia,Labor
-Division 76,Tasmania,Labor
-Division 77,Queensland,Liberal
-Division 78,Western Australia,Liberal
-Division 79,Queensland,Labor
-Division 80,Queensland,Liberal
-Division 81,Victoria,Labor
-Division 82,New South Wales,Liberal
-Division 83,Victoria,Liberal
-Division 84,Queensland,National
-Division 85,Western Australia,Liberal
-Division 86,New South Wales,Labor
-Division 87,Queensland,Liberal
-Division 88,New South Wales,Liberal
-Division 89,Tasmania,Liberal
-Division 90,South Australia,Labor
-Division 91,Victoria,Liberal
-Division 92,New South Wales,Labor
-Division 93,Tasmania,Labor
-Division 94,South Australia,Labor
-Division 95,Victoria,Liberal
-Division 96,Victoria,Labor
-Division 97,Western Australia,Liberal
-Division 98,Queensland,Liberal
-Division 99,South Australia,Liberal
-Division 100,New South Wales,Labor
-Division 101,South Australia,Labor
-Division 102,New South Wales,Labor
-Division 103,Victoria,Labor
-Division 104,Victoria,Labor
-Division 105,South Australia,Other
-Division 106,Western Australia,Labor
-Division 107,Tasmania,Liberal
-Division 108,Victoria,Labor
-Division 109,Queensland,Liberal
-Division 110,Victoria,Labor
-Division 111,Australian Capital Territory,Labor
-Division 112,Victoria,Liberal
-Division 113,Victoria,Liberal
-Division 114,Victoria,Liberal
-Division 115,Tasmania,Labor
-Division 116,Victoria,Labor
-Division 117,New South Wales,Labor
-Division 118,Victoria,Labor
-Division 119,Victoria,Greens
-Division 120,Northern Territory,Labor
-Division 121,South Australia,Liberal
-Division 122,New South Wales,Liberal
-Division 123,New South Wales,Labor
-Division 124,New South Wales,Liberal
-Division 125,New South Wales,National
-Division 126,New South Wales,Labor
-Division 127,Queensland,Labor
-Division 128,New South Wales,Other
-Division 129,Queensland,Labor
-Division 130,Australian Capital Territory,Liberal
-Division 131,Tasmania,Greens
-Division 132,New South Wales,National
-Division 133,New South Wales,Labor
-Division 134,Northern Territory,Labor
-Division 135,South Australia,National
-Division 136,Victoria,Labor
-Division 137,Tasmania,National
-Division 138,South Australia,Liberal
-Division 139,New South Wales,Labor
-Division 140,Victoria,Other
-Division 141,Queensland,Greens
-Division 142,Victoria,National
-Division 143,Western Australia,Labor
-Division 144,Victoria,Labor
-Division 145,Queensland,Liberal
-Division 146,Tasmania,Liberal
-Division 147,South Australia,Liberal
-Division 148,Victoria,Labor
-Division 149,New South Wales,National
-Division 150,New South Wales,Labor
-Division 151,Victoria,Liberal
+product_id,vendor,product_name,current_price,old_price,price_per_unit,units,brand,nowtime,concatted
+8176,Voila,Milk,5.73,14.9,0.95,lb,Brand D,2024-01-01,category2
+8871,No Frills,Milk,9.5,3.27,1.45,kg,Brand B,2024-01-01 01:00:00,category2
+5316,Walmart,Milk,7.42,7.79,0.32,ea,Brand A,2024-01-01 02:00:00,category1
+3448,T&T,Toast,4.69,12.22,0.56,g,Brand C,2024-01-01 03:00:00,category3
+9574,Galleria,Toast,14.88,7.28,0.16,ea,Brand B,2024-01-01 04:00:00,category3
+6408,Loblaws,Orange Juice,6.61,7.34,0.44,g,Brand B,2024-01-01 05:00:00,category1
+7802,Save-On-Foods,Brown Eggs,5.57,11.88,1.03,g,Brand C,2024-01-01 06:00:00,category1
+4894,No Frills,Bacon,2.09,11.08,0.49,lb,Brand C,2024-01-01 07:00:00,category3
+3338,Save-On-Foods,Toast,11.59,5.92,0.43,g,Brand A,2024-01-01 08:00:00,category2
+3518,T&T,Orange Juice,6.46,9.43,1.59,g,Brand B,2024-01-01 09:00:00,category3
+4843,Voila,Brown Eggs,3.62,5.72,1.55,kg,Brand B,2024-01-01 10:00:00,category3
+6259,No Frills,Orange Juice,3.5,2.82,1.89,lb,Brand B,2024-01-01 11:00:00,category1
+2703,Metro,Orange Juice,14.26,10.55,0.29,g,Brand D,2024-01-01 12:00:00,category2
+1132,Galleria,Brown Eggs,12.15,14.34,0.21,kg,Brand C,2024-01-01 13:00:00,category3
+9449,T&T,Orange Juice,12.67,12.8,0.83,kg,Brand D,2024-01-01 14:00:00,category3
+8032,Galleria,Milk,8.8,8.68,1.98,lb,Brand C,2024-01-01 15:00:00,category2
+6312,T&T,Toast,7.42,2.65,1.82,lb,Brand C,2024-01-01 16:00:00,category1
+9086,Loblaws,Milk,12.25,13.78,0.52,ea,Brand D,2024-01-01 17:00:00,category2
+4181,Loblaws,Bacon,10.06,19.02,0.25,g,Brand C,2024-01-01 18:00:00,category3
+3988,Loblaws,Milk,5.12,6.38,0.71,lb,Brand C,2024-01-01 19:00:00,category1
+6258,Galleria,Brown Eggs,6.82,16.84,1.3,lb,Brand D,2024-01-01 20:00:00,category1
+4290,Voila,Milk,4.01,2.35,0.52,kg,Brand B,2024-01-01 21:00:00,category2
+3225,Save-On-Foods,Bacon,12.23,16.03,0.45,g,Brand A,2024-01-01 22:00:00,category3
+9782,Loblaws,Orange Juice,7.54,19.34,1.58,ea,Brand C,2024-01-01 23:00:00,category2
+7360,Voila,Brown Eggs,14.17,2.66,0.66,lb,Brand A,2024-01-02,category1
+1298,Voila,Milk,2.07,8.03,0.42,g,Brand C,2024-01-02 01:00:00,category1
+6377,Walmart,Brown Eggs,8.01,8.93,1.64,g,Brand D,2024-01-02 02:00:00,category2
+9448,T&T,Milk,3.3,15.49,0.85,lb,Brand C,2024-01-02 03:00:00,category3
+8151,Galleria,Orange Juice,14.34,19.16,0.62,lb,Brand B,2024-01-02 04:00:00,category2
+2901,Galleria,Brown Eggs,13.5,3.84,1.23,kg,Brand D,2024-01-02 05:00:00,category1
+2608,Voila,Brown Eggs,4.62,14.21,0.34,ea,Brand B,2024-01-02 06:00:00,category3
+7447,Galleria,Brown Eggs,2.76,12.96,0.78,ea,Brand A,2024-01-02 07:00:00,category2
+7749,Loblaws,Milk,5.17,18.96,0.1,ea,Brand D,2024-01-02 08:00:00,category3
+6591,No Frills,Bacon,7.58,12.05,0.87,lb,Brand C,2024-01-02 09:00:00,category3
+5356,No Frills,Brown Eggs,6.03,13.44,1.29,g,Brand B,2024-01-02 10:00:00,category1
+6760,Metro,Brown Eggs,8.8,14.85,1.48,g,Brand B,2024-01-02 11:00:00,category2
+9837,Loblaws,Bacon,8.37,17.71,1.42,kg,Brand C,2024-01-02 12:00:00,category1
+5443,Walmart,Milk,2.63,15.28,1.21,g,Brand B,2024-01-02 13:00:00,category2
+4556,Galleria,Toast,2.53,2.86,1.56,lb,Brand C,2024-01-02 14:00:00,category3
+1873,No Frills,Bacon,6.79,6.16,0.52,lb,Brand B,2024-01-02 15:00:00,category1
+2935,Save-On-Foods,Bacon,3.91,11.19,0.43,g,Brand C,2024-01-02 16:00:00,category1
+7635,No Frills,Toast,8.38,7.93,0.77,ea,Brand A,2024-01-02 17:00:00,category3
+1250,No Frills,Milk,9.77,17.3,1.9,lb,Brand D,2024-01-02 18:00:00,category1
+2584,Voila,Milk,6.16,8.4,0.35,ea,Brand C,2024-01-02 19:00:00,category1
+9674,Walmart,Orange Juice,5.68,7.05,0.28,lb,Brand B,2024-01-02 20:00:00,category2
+2003,Save-On-Foods,Toast,6.4,2.67,0.76,ea,Brand C,2024-01-02 21:00:00,category1
+6649,Walmart,Milk,13.13,8.15,1.61,lb,Brand C,2024-01-02 22:00:00,category3
+9674,Save-On-Foods,Orange Juice,7.97,13.71,0.2,ea,Brand A,2024-01-02 23:00:00,category2
+4901,Voila,Orange Juice,7.76,7.31,1.22,g,Brand C,2024-01-03,category2
+9562,Metro,Orange Juice,5.37,7.93,1.71,g,Brand D,2024-01-03 01:00:00,category3
+9740,Voila,Milk,3.12,14.23,0.13,lb,Brand B,2024-01-03 02:00:00,category2
+3060,Metro,Milk,5.88,2.5,1.61,ea,Brand C,2024-01-03 03:00:00,category1
+9522,T&T,Toast,3.83,9.29,1.37,ea,Brand A,2024-01-03 04:00:00,category1
+5192,No Frills,Milk,4.39,2.02,0.44,lb,Brand A,2024-01-03 05:00:00,category3
+9795,Galleria,Brown Eggs,7.6,3.99,1.1,ea,Brand B,2024-01-03 06:00:00,category2
+8665,Voila,Brown Eggs,10.2,12.29,0.48,kg,Brand D,2024-01-03 07:00:00,category2
+8047,No Frills,Toast,8.55,15.22,0.83,ea,Brand B,2024-01-03 08:00:00,category1
+2255,Galleria,Brown Eggs,14.45,13.5,0.66,lb,Brand A,2024-01-03 09:00:00,category3
+1903,T&T,Toast,3.46,13.94,1.4,ea,Brand A,2024-01-03 10:00:00,category3
+7988,Galleria,Orange Juice,13.17,19.72,1.77,ea,Brand B,2024-01-03 11:00:00,category2
+5725,No Frills,Milk,9.7,12.01,0.5,ea,Brand C,2024-01-03 12:00:00,category1
+3631,Galleria,Toast,9.79,11.84,0.12,kg,Brand D,2024-01-03 13:00:00,category2
+9755,T&T,Orange Juice,10.72,4.38,1.12,lb,Brand D,2024-01-03 14:00:00,category1
+8776,Walmart,Orange Juice,11.41,16.32,1.03,g,Brand B,2024-01-03 15:00:00,category2
+4267,Loblaws,Milk,3.39,7.71,0.26,lb,Brand B,2024-01-03 16:00:00,category1
+7938,Walmart,Milk,4.95,17.14,1.05,lb,Brand A,2024-01-03 17:00:00,category1
+7224,Walmart,Milk,12.68,11.93,0.64,kg,Brand D,2024-01-03 18:00:00,category3
+6948,Galleria,Milk,12.69,3.86,0.94,kg,Brand C,2024-01-03 19:00:00,category3
+2200,Voila,Milk,12.93,15.84,1.09,g,Brand A,2024-01-03 20:00:00,category2
+3856,Walmart,Orange Juice,13.83,2.23,1.21,kg,Brand C,2024-01-03 21:00:00,category2
+1458,Save-On-Foods,Bacon,7.01,11.1,0.11,kg,Brand B,2024-01-03 22:00:00,category2
+4991,Metro,Orange Juice,6.47,8.21,1.49,lb,Brand A,2024-01-03 23:00:00,category1
+1599,T&T,Toast,3.12,11.58,0.47,lb,Brand A,2024-01-04,category2
+2403,No Frills,Orange Juice,11.58,16.48,1.61,lb,Brand B,2024-01-04 01:00:00,category3
+3910,Walmart,Brown Eggs,12.24,8.9,1.28,kg,Brand B,2024-01-04 02:00:00,category3
+7763,Metro,Brown Eggs,4,10.7,1.5,lb,Brand D,2024-01-04 03:00:00,category2
+6481,Loblaws,Brown Eggs,4.85,12.02,0.8,lb,Brand D,2024-01-04 04:00:00,category2
+2351,Loblaws,Milk,13.04,12.94,1.41,kg,Brand C,2024-01-04 05:00:00,category3
+1368,Galleria,Bacon,11.63,9.59,0.56,lb,Brand B,2024-01-04 06:00:00,category1
+5526,Loblaws,Brown Eggs,2.97,3.06,1.52,ea,Brand A,2024-01-04 07:00:00,category2
+3288,Voila,Bacon,13.98,17.89,0.46,g,Brand B,2024-01-04 08:00:00,category1
+8886,No Frills,Toast,14.03,2.36,0.54,g,Brand B,2024-01-04 09:00:00,category3
+8945,Voila,Milk,11.89,17.88,1.78,kg,Brand D,2024-01-04 10:00:00,category1
+6781,Voila,Milk,11.03,6.8,1.79,lb,Brand D,2024-01-04 11:00:00,category3
+1011,Voila,Brown Eggs,3.55,18.1,1.14,ea,Brand C,2024-01-04 12:00:00,category1
+1621,Loblaws,Bacon,12.14,17.99,0.21,ea,Brand C,2024-01-04 13:00:00,category1
+8972,Voila,Orange Juice,9.11,3.18,1.12,g,Brand B,2024-01-04 14:00:00,category1
+8696,Metro,Toast,8.97,17.56,1.93,kg,Brand A,2024-01-04 15:00:00,category3
+3602,Save-On-Foods,Milk,7.48,13.44,1.85,ea,Brand B,2024-01-04 16:00:00,category3
+8504,Save-On-Foods,Milk,8.21,3.77,0.49,kg,Brand B,2024-01-04 17:00:00,category1
+6088,T&T,Milk,6.36,5.49,0.12,kg,Brand D,2024-01-04 18:00:00,category3
+6053,T&T,Bacon,6.81,17.46,1.99,kg,Brand C,2024-01-04 19:00:00,category3
+4200,T&T,Bacon,8.98,11.9,0.96,lb,Brand C,2024-01-04 20:00:00,category1
+7037,Voila,Bacon,12.96,12.61,0.19,ea,Brand C,2024-01-04 21:00:00,category2
+3391,Walmart,Brown Eggs,6.08,9.74,0.13,g,Brand B,2024-01-04 22:00:00,category2
+2167,Voila,Brown Eggs,4.66,13.12,0.63,kg,Brand C,2024-01-04 23:00:00,category3
+1943,Voila,Milk,6.61,4.2,1.33,kg,Brand A,2024-01-05,category1
+6142,Metro,Brown Eggs,11.05,14.02,0.98,kg,Brand D,2024-01-05 01:00:00,category1
+9518,Voila,Brown Eggs,8.15,8,0.67,ea,Brand B,2024-01-05 02:00:00,category3
+8691,No Frills,Bacon,4.6,6.07,1.91,g,Brand B,2024-01-05 03:00:00,category2
+3410,Metro,Orange Juice,14.05,6.87,1.83,kg,Brand B,2024-01-05 04:00:00,category3
+4373,Walmart,Orange Juice,11.09,8.89,0.57,lb,Brand C,2024-01-05 05:00:00,category3
+2178,Loblaws,Milk,11.91,17.61,1.96,g,Brand B,2024-01-05 06:00:00,category1
+3566,Metro,Toast,7.9,17.04,1.41,ea,Brand A,2024-01-05 07:00:00,category3
+8792,Loblaws,Milk,9,18.26,0.32,ea,Brand A,2024-01-05 08:00:00,category2
+8384,Loblaws,Toast,11.45,2.24,1,kg,Brand C,2024-01-05 09:00:00,category1
+9681,No Frills,Bacon,2.23,4.14,1.96,g,Brand B,2024-01-05 10:00:00,category1
+2087,Save-On-Foods,Bacon,2.27,14.44,1.75,kg,Brand A,2024-01-05 11:00:00,category1
+5860,Voila,Orange Juice,3.92,8.5,1.92,lb,Brand B,2024-01-05 12:00:00,category1
+2596,Walmart,Orange Juice,4.24,11.96,1.52,g,Brand A,2024-01-05 13:00:00,category3
+4675,Metro,Bacon,14.25,4.77,1.89,ea,Brand B,2024-01-05 14:00:00,category2
+7855,Loblaws,Brown Eggs,2.93,5.48,0.9,ea,Brand D,2024-01-05 15:00:00,category2
+4285,Loblaws,Orange Juice,5.82,5.24,1.39,kg,Brand C,2024-01-05 16:00:00,category2
+3577,T&T,Milk,11.38,10.62,1.59,kg,Brand D,2024-01-05 17:00:00,category3
+7324,Voila,Brown Eggs,3.92,11.48,0.24,kg,Brand B,2024-01-05 18:00:00,category3
+5080,Galleria,Toast,13.77,9.58,1.25,lb,Brand A,2024-01-05 19:00:00,category1
+2764,T&T,Milk,11.91,9.82,1.49,kg,Brand A,2024-01-05 20:00:00,category3
+2692,Galleria,Orange Juice,6.61,8.03,0.42,ea,Brand B,2024-01-05 21:00:00,category1
+2317,Galleria,Brown Eggs,14.45,9.98,1.31,lb,Brand B,2024-01-05 22:00:00,category1
+4586,Loblaws,Milk,2.2,5.28,1.81,lb,Brand C,2024-01-05 23:00:00,category1
+6623,Metro,Bacon,12.35,13.23,1.87,ea,Brand D,2024-01-06,category3
+5783,Save-On-Foods,Brown Eggs,7.78,2.81,0.88,ea,Brand A,2024-01-06 01:00:00,category2
+9021,T&T,Bacon,12.01,7.8,1.67,kg,Brand C,2024-01-06 02:00:00,category2
+8759,Loblaws,Toast,3.25,15.76,1.22,lb,Brand C,2024-01-06 03:00:00,category1
+1402,Galleria,Bacon,13.48,12.2,1.05,lb,Brand D,2024-01-06 04:00:00,category2
+5469,Voila,Brown Eggs,2.59,9.16,1.52,lb,Brand D,2024-01-06 05:00:00,category1
+1519,Voila,Bacon,7.76,13.68,0.32,g,Brand A,2024-01-06 06:00:00,category2
+9909,Loblaws,Brown Eggs,11.67,17.53,0.35,lb,Brand A,2024-01-06 07:00:00,category3
+7214,Voila,Milk,9.68,14.27,0.32,ea,Brand C,2024-01-06 08:00:00,category1
+3239,Walmart,Toast,8.13,3.26,1.95,kg,Brand D,2024-01-06 09:00:00,category2
+6368,T&T,Orange Juice,13.96,7.69,1.53,g,Brand B,2024-01-06 10:00:00,category1
+9197,Metro,Bacon,14.44,9.99,0.99,lb,Brand A,2024-01-06 11:00:00,category3
+7080,T&T,Bacon,11.37,7.82,1.06,lb,Brand B,2024-01-06 12:00:00,category3
+9083,Save-On-Foods,Milk,6.9,9.35,1.06,ea,Brand C,2024-01-06 13:00:00,category1
+1394,No Frills,Bacon,12.15,4.08,0.73,kg,Brand B,2024-01-06 14:00:00,category2
+2186,Loblaws,Milk,8.56,6.86,0.58,g,Brand D,2024-01-06 15:00:00,category3
+2332,Save-On-Foods,Orange Juice,2.26,12.92,1.82,g,Brand B,2024-01-06 16:00:00,category2
+5729,No Frills,Brown Eggs,3.38,4.66,1.29,kg,Brand C,2024-01-06 17:00:00,category2
+1396,Metro,Orange Juice,13.81,15.9,0.2,lb,Brand A,2024-01-06 18:00:00,category1
+7440,No Frills,Brown Eggs,5.46,2.56,1.27,kg,Brand A,2024-01-06 19:00:00,category2
+9811,Loblaws,Milk,11.49,10.44,1.6,ea,Brand A,2024-01-06 20:00:00,category1
+2319,Walmart,Brown Eggs,7,15.53,0.33,ea,Brand A,2024-01-06 21:00:00,category1
+1602,Galleria,Milk,5.62,4.85,1.21,ea,Brand D,2024-01-06 22:00:00,category3
+2873,Walmart,Brown Eggs,13.69,11.16,1.88,lb,Brand B,2024-01-06 23:00:00,category3
+5319,Walmart,Bacon,6.08,17.99,1.28,lb,Brand C,2024-01-07,category3
+9667,No Frills,Milk,4.74,15.67,0.53,kg,Brand C,2024-01-07 01:00:00,category2
+7679,Voila,Orange Juice,14.62,10.48,1.82,kg,Brand A,2024-01-07 02:00:00,category1
+5145,T&T,Brown Eggs,13.12,2.68,1.09,kg,Brand A,2024-01-07 03:00:00,category2
+9130,Walmart,Milk,11.43,3.43,1.52,g,Brand C,2024-01-07 04:00:00,category3
+9344,Loblaws,Toast,10.74,17.71,1.49,g,Brand D,2024-01-07 05:00:00,category1
+2022,Loblaws,Brown Eggs,2.91,9.15,1.34,ea,Brand A,2024-01-07 06:00:00,category1
+4494,Save-On-Foods,Orange Juice,4.99,4.14,1.68,kg,Brand D,2024-01-07 07:00:00,category3
+6214,Voila,Orange Juice,6.53,10.91,2,ea,Brand A,2024-01-07 08:00:00,category3
+9450,Metro,Orange Juice,9.26,8.32,1.01,lb,Brand D,2024-01-07 09:00:00,category1
+3998,T&T,Orange Juice,13.04,11.59,1.6,lb,Brand A,2024-01-07 10:00:00,category1
+9467,Galleria,Orange Juice,2.73,19.49,1.29,g,Brand B,2024-01-07 11:00:00,category2
+2718,No Frills,Milk,5.27,5.11,0.2,lb,Brand C,2024-01-07 12:00:00,category3
+9524,T&T,Orange Juice,9.27,13.28,0.15,lb,Brand C,2024-01-07 13:00:00,category1
+2401,Loblaws,Bacon,6.05,12.8,1.55,ea,Brand A,2024-01-07 14:00:00,category3
+5409,T&T,Milk,14.16,5.77,0.75,kg,Brand C,2024-01-07 15:00:00,category1
+5437,Metro,Orange Juice,7.2,10.23,0.9,lb,Brand B,2024-01-07 16:00:00,category2
+3184,Metro,Bacon,6.48,11.54,1.95,kg,Brand B,2024-01-07 17:00:00,category2
+4232,Save-On-Foods,Brown Eggs,11.48,8.76,0.43,kg,Brand C,2024-01-07 18:00:00,category3
+4250,Walmart,Toast,5.56,14.01,1.45,g,Brand B,2024-01-07 19:00:00,category1
+5227,Walmart,Brown Eggs,10.22,4.13,1.96,lb,Brand A,2024-01-07 20:00:00,category2
+2375,Metro,Bacon,12.12,8.46,0.66,kg,Brand C,2024-01-07 21:00:00,category3
+5104,No Frills,Bacon,2.68,4.01,0.82,kg,Brand C,2024-01-07 22:00:00,category3
+6106,No Frills,Orange Juice,14.27,9.93,0.66,kg,Brand B,2024-01-07 23:00:00,category3
+4848,Metro,Brown Eggs,8.02,13.91,1.17,g,Brand B,2024-01-08,category2
+9359,No Frills,Brown Eggs,3.19,2.83,0.62,g,Brand B,2024-01-08 01:00:00,category3
+7848,Voila,Brown Eggs,3.87,9.14,1.43,ea,Brand C,2024-01-08 02:00:00,category3
+5253,Save-On-Foods,Milk,10.5,16.81,0.17,lb,Brand B,2024-01-08 03:00:00,category3
+5938,Save-On-Foods,Milk,12.79,15.38,0.65,lb,Brand A,2024-01-08 04:00:00,category2
+8279,T&T,Toast,11.43,4.66,1.47,lb,Brand D,2024-01-08 05:00:00,category1
+1550,Metro,Milk,13.42,19.64,0.91,kg,Brand B,2024-01-08 06:00:00,category1
+8320,Metro,Milk,7.61,15.82,0.41,g,Brand B,2024-01-08 07:00:00,category1
+1097,No Frills,Toast,7.62,19.05,1.04,ea,Brand D,2024-01-08 08:00:00,category3
+8786,Galleria,Bacon,8.02,19.24,0.98,ea,Brand B,2024-01-08 09:00:00,category2
+5044,Voila,Orange Juice,8.05,5.16,0.5,lb,Brand D,2024-01-08 10:00:00,category1
+1177,Metro,Brown Eggs,5.94,6.54,1.36,lb,Brand D,2024-01-08 11:00:00,category2
+2613,Loblaws,Brown Eggs,7.4,12.47,1.37,lb,Brand C,2024-01-08 12:00:00,category1
+8540,Walmart,Brown Eggs,5.15,19.92,0.54,lb,Brand D,2024-01-08 13:00:00,category3
+1165,T&T,Bacon,11.51,9.16,1.52,ea,Brand C,2024-01-08 14:00:00,category1
+4862,T&T,Toast,10.43,6.23,0.44,kg,Brand C,2024-01-08 15:00:00,category1
+5838,Metro,Brown Eggs,6.63,16.94,0.35,kg,Brand D,2024-01-08 16:00:00,category2
+5375,No Frills,Orange Juice,7.56,8.55,1.15,kg,Brand C,2024-01-08 17:00:00,category1
+9162,Voila,Orange Juice,3.94,16.66,1.52,lb,Brand D,2024-01-08 18:00:00,category2
+5174,T&T,Milk,8.67,9.49,1,lb,Brand C,2024-01-08 19:00:00,category3
+3982,No Frills,Orange Juice,8.66,7.41,0.8,kg,Brand B,2024-01-08 20:00:00,category2
+8154,T&T,Brown Eggs,7,8.7,1.8,g,Brand D,2024-01-08 21:00:00,category2
+1355,Walmart,Brown Eggs,4.58,8.64,0.54,lb,Brand A,2024-01-08 22:00:00,category3
+9869,Save-On-Foods,Bacon,2.32,14.8,1.35,kg,Brand C,2024-01-08 23:00:00,category2
+1050,Metro,Toast,8.57,18.01,0.91,kg,Brand B,2024-01-09,category2
+2947,Galleria,Orange Juice,8.95,16.93,1.97,kg,Brand D,2024-01-09 01:00:00,category2
+8124,No Frills,Toast,14.38,10.89,1.06,lb,Brand A,2024-01-09 02:00:00,category2
+4465,Loblaws,Brown Eggs,8.09,11.15,0.7,ea,Brand D,2024-01-09 03:00:00,category2
+6518,Metro,Bacon,3.93,7.53,1.02,ea,Brand C,2024-01-09 04:00:00,category2
+6430,Save-On-Foods,Orange Juice,6.39,14.26,0.55,lb,Brand B,2024-01-09 05:00:00,category1
+4003,Walmart,Brown Eggs,3.11,4.72,1.77,kg,Brand C,2024-01-09 06:00:00,category1
+8431,No Frills,Toast,13.47,17.42,0.38,ea,Brand B,2024-01-09 07:00:00,category2
+2860,Galleria,Bacon,4.25,18.48,0.54,ea,Brand D,2024-01-09 08:00:00,category1
+8126,Walmart,Orange Juice,4.82,2.09,0.86,ea,Brand A,2024-01-09 09:00:00,category2
+6574,Save-On-Foods,Bacon,3.88,12.9,1.33,g,Brand D,2024-01-09 10:00:00,category3
+4134,T&T,Brown Eggs,7.88,7.57,1.79,kg,Brand C,2024-01-09 11:00:00,category2
+1941,Loblaws,Brown Eggs,10.46,12.37,0.1,ea,Brand D,2024-01-09 12:00:00,category1
+9951,No Frills,Toast,5.48,7.9,1.65,lb,Brand A,2024-01-09 13:00:00,category3
+1655,Metro,Milk,3.06,6.98,1.08,kg,Brand B,2024-01-09 14:00:00,category1
+8140,Walmart,Brown Eggs,11.28,12.1,1.29,lb,Brand D,2024-01-09 15:00:00,category2
+2590,No Frills,Bacon,8.31,9.61,0.27,lb,Brand B,2024-01-09 16:00:00,category2
+1516,Loblaws,Toast,7.52,7.46,1.75,ea,Brand D,2024-01-09 17:00:00,category3
+6181,Walmart,Bacon,6.77,2.43,0.95,kg,Brand D,2024-01-09 18:00:00,category2
+5298,Loblaws,Milk,11.77,12.18,0.97,lb,Brand C,2024-01-09 19:00:00,category2
+2322,Save-On-Foods,Milk,12.95,17.42,0.57,ea,Brand C,2024-01-09 20:00:00,category1
+4554,Galleria,Brown Eggs,4.8,16.65,0.53,ea,Brand A,2024-01-09 21:00:00,category1
+4485,Walmart,Milk,4.11,9.74,0.57,ea,Brand C,2024-01-09 22:00:00,category1
+8601,Galleria,Orange Juice,8.59,8.35,0.59,lb,Brand C,2024-01-09 23:00:00,category1
+5869,Loblaws,Milk,3.58,7.36,0.77,g,Brand D,2024-01-10,category1
+3258,No Frills,Orange Juice,12.94,19.97,1.02,kg,Brand B,2024-01-10 01:00:00,category2
+3650,Loblaws,Brown Eggs,8.11,9.92,0.65,kg,Brand B,2024-01-10 02:00:00,category3
+8058,No Frills,Milk,7.98,11.24,0.35,g,Brand B,2024-01-10 03:00:00,category1
+9373,Galleria,Toast,4.22,7.88,1.07,ea,Brand C,2024-01-10 04:00:00,category1
+7704,Metro,Brown Eggs,2.96,14.32,1.02,lb,Brand B,2024-01-10 05:00:00,category3
+4648,Galleria,Bacon,4.09,16.02,1.83,lb,Brand D,2024-01-10 06:00:00,category2
+9840,No Frills,Brown Eggs,11.21,14.8,1,lb,Brand A,2024-01-10 07:00:00,category2
+8199,Galleria,Orange Juice,11.98,9.51,1.04,ea,Brand D,2024-01-10 08:00:00,category1
+2103,Loblaws,Brown Eggs,7.08,17.42,1.26,lb,Brand B,2024-01-10 09:00:00,category3
+1070,No Frills,Brown Eggs,7.86,18.64,1.98,ea,Brand D,2024-01-10 10:00:00,category2
+9871,Save-On-Foods,Orange Juice,4.52,19.38,1.5,lb,Brand B,2024-01-10 11:00:00,category1
+7242,Voila,Toast,8.72,6.03,1.96,g,Brand C,2024-01-10 12:00:00,category2
+6433,Walmart,Brown Eggs,14.25,3.14,0.39,kg,Brand B,2024-01-10 13:00:00,category1
+2187,Metro,Orange Juice,4.17,11.84,0.89,ea,Brand C,2024-01-10 14:00:00,category2
+3750,Galleria,Toast,7.82,19.33,0.35,kg,Brand B,2024-01-10 15:00:00,category3
+9002,Walmart,Toast,7.39,12.95,0.32,g,Brand B,2024-01-10 16:00:00,category3
+3331,T&T,Milk,14.65,18.58,1.48,g,Brand A,2024-01-10 17:00:00,category2
+7080,Loblaws,Milk,14.7,10.72,1.42,g,Brand A,2024-01-10 18:00:00,category1
+1184,Walmart,Bacon,8.77,10.52,1.65,g,Brand A,2024-01-10 19:00:00,category1
+3039,Metro,Brown Eggs,7.35,9.65,0.83,kg,Brand D,2024-01-10 20:00:00,category3
+5645,T&T,Toast,14.73,9.64,1.18,g,Brand A,2024-01-10 21:00:00,category3
+6648,Loblaws,Bacon,10.21,13.23,0.2,ea,Brand B,2024-01-10 22:00:00,category1
+1316,No Frills,Toast,5.59,17.47,0.85,lb,Brand D,2024-01-10 23:00:00,category2
+5396,No Frills,Orange Juice,8.33,14.49,1.43,kg,Brand B,2024-01-11,category1
+6902,Voila,Brown Eggs,13.46,4.37,0.86,ea,Brand C,2024-01-11 01:00:00,category3
+1440,Metro,Toast,5.37,4.52,0.25,kg,Brand D,2024-01-11 02:00:00,category1
+5555,Save-On-Foods,Orange Juice,12.73,6.51,1.18,lb,Brand C,2024-01-11 03:00:00,category3
+9020,Loblaws,Bacon,15,10.54,0.31,kg,Brand C,2024-01-11 04:00:00,category2
+5188,Save-On-Foods,Milk,6.37,5,1.14,ea,Brand A,2024-01-11 05:00:00,category2
+2742,Loblaws,Milk,9.76,4.79,0.52,g,Brand B,2024-01-11 06:00:00,category1
+5820,Metro,Brown Eggs,10.99,8.92,0.25,ea,Brand A,2024-01-11 07:00:00,category3
+8652,Voila,Milk,7.12,18.31,0.91,ea,Brand B,2024-01-11 08:00:00,category3
+5044,Galleria,Bacon,3.08,4.15,0.5,kg,Brand C,2024-01-11 09:00:00,category2
+9067,Save-On-Foods,Bacon,7.09,17.39,0.22,ea,Brand C,2024-01-11 10:00:00,category3
+6980,Loblaws,Toast,5.83,3.08,0.57,ea,Brand B,2024-01-11 11:00:00,category2
+8063,No Frills,Brown Eggs,2.95,10.34,1.65,kg,Brand B,2024-01-11 12:00:00,category3
+6462,Voila,Brown Eggs,8.15,16.4,0.99,lb,Brand B,2024-01-11 13:00:00,category1
+7369,Metro,Bacon,9.06,13.61,1.77,kg,Brand B,2024-01-11 14:00:00,category2
+6487,Save-On-Foods,Toast,12.6,3.06,1.48,kg,Brand A,2024-01-11 15:00:00,category1
+6877,Galleria,Orange Juice,10.05,11.01,1.26,ea,Brand A,2024-01-11 16:00:00,category2
+2278,Save-On-Foods,Bacon,12.27,4.43,1.42,kg,Brand B,2024-01-11 17:00:00,category3
+4446,T&T,Orange Juice,8.9,6.39,1.78,lb,Brand A,2024-01-11 18:00:00,category2
+6702,T&T,Brown Eggs,6,19.96,1.06,kg,Brand A,2024-01-11 19:00:00,category1
+6335,T&T,Toast,11.37,2.55,1.89,g,Brand A,2024-01-11 20:00:00,category1
+7448,No Frills,Orange Juice,8.69,17.33,1.15,ea,Brand C,2024-01-11 21:00:00,category2
+8898,Save-On-Foods,Milk,11.63,5.55,0.82,g,Brand C,2024-01-11 22:00:00,category1
+1273,Voila,Toast,13.73,5.51,0.14,lb,Brand D,2024-01-11 23:00:00,category1
+9515,T&T,Milk,5.3,9.16,0.97,lb,Brand C,2024-01-12,category1
+9660,Voila,Orange Juice,13.86,9.92,1.25,kg,Brand A,2024-01-12 01:00:00,category1
+9422,Galleria,Orange Juice,12.75,3.75,1.91,lb,Brand A,2024-01-12 02:00:00,category3
+9414,Loblaws,Bacon,7.08,9.06,1.78,g,Brand B,2024-01-12 03:00:00,category2
+2569,Walmart,Brown Eggs,6.56,7.52,1.83,lb,Brand B,2024-01-12 04:00:00,category2
+3316,Voila,Bacon,10.65,10.25,0.94,kg,Brand B,2024-01-12 05:00:00,category3
+8069,T&T,Brown Eggs,13.96,2.92,1.48,ea,Brand B,2024-01-12 06:00:00,category1
+7905,Loblaws,Bacon,14.91,18.81,1.8,ea,Brand C,2024-01-12 07:00:00,category3
+3603,T&T,Milk,9.66,10.56,1.26,kg,Brand C,2024-01-12 08:00:00,category2
+5014,Metro,Orange Juice,3.84,14.13,1.12,g,Brand C,2024-01-12 09:00:00,category3
+8288,No Frills,Bacon,5.16,6.38,1.89,g,Brand C,2024-01-12 10:00:00,category2
+9883,Loblaws,Milk,2.81,2.75,1.36,g,Brand C,2024-01-12 11:00:00,category2
+3980,No Frills,Bacon,14.26,7.03,0.25,g,Brand A,2024-01-12 12:00:00,category1
+1301,Metro,Toast,2.43,10.45,0.9,kg,Brand A,2024-01-12 13:00:00,category3
+4656,Walmart,Orange Juice,6.99,14.64,0.65,ea,Brand C,2024-01-12 14:00:00,category3
+3780,T&T,Bacon,8.93,15.35,0.46,g,Brand C,2024-01-12 15:00:00,category3
+1623,Galleria,Milk,13.94,6.28,0.75,kg,Brand D,2024-01-12 16:00:00,category2
+8650,Save-On-Foods,Toast,5.36,5.46,0.91,g,Brand A,2024-01-12 17:00:00,category3
+6509,Walmart,Orange Juice,5.99,16.96,0.51,ea,Brand D,2024-01-12 18:00:00,category3
+5056,Loblaws,Milk,2.39,18.59,1.28,lb,Brand A,2024-01-12 19:00:00,category1
+3456,Voila,Bacon,7.86,13.83,1.21,g,Brand A,2024-01-12 20:00:00,category1
+1161,No Frills,Toast,4.21,18.72,0.18,lb,Brand B,2024-01-12 21:00:00,category3
+5041,Voila,Orange Juice,3.94,17.81,1.67,g,Brand C,2024-01-12 22:00:00,category1
+4233,No Frills,Toast,12.53,12.51,0.99,kg,Brand C,2024-01-12 23:00:00,category2
+5965,Voila,Bacon,5.96,15.4,0.77,kg,Brand C,2024-01-13,category1
+1788,Loblaws,Brown Eggs,8.29,3.05,1.96,lb,Brand A,2024-01-13 01:00:00,category1
+9294,No Frills,Milk,8.53,18.45,1.29,g,Brand C,2024-01-13 02:00:00,category3
+7522,Save-On-Foods,Orange Juice,7.14,14.01,0.45,kg,Brand A,2024-01-13 03:00:00,category1
+9657,Save-On-Foods,Orange Juice,6.64,6.23,1.25,lb,Brand B,2024-01-13 04:00:00,category2
+9622,Galleria,Bacon,4.04,10.47,0.56,kg,Brand B,2024-01-13 05:00:00,category1
+5492,Voila,Brown Eggs,6.69,13.5,1.62,g,Brand D,2024-01-13 06:00:00,category2
+6213,Loblaws,Milk,5.98,14.14,0.37,lb,Brand D,2024-01-13 07:00:00,category2
+5049,Save-On-Foods,Bacon,7.98,6.86,1.13,lb,Brand B,2024-01-13 08:00:00,category3
+3616,Voila,Orange Juice,8.17,6.32,0.67,lb,Brand B,2024-01-13 09:00:00,category2
+9453,No Frills,Orange Juice,12.23,19.79,0.72,lb,Brand A,2024-01-13 10:00:00,category3
+1004,Metro,Orange Juice,12.59,2.85,1.64,kg,Brand C,2024-01-13 11:00:00,category2
+2882,T&T,Toast,13.87,13.23,0.68,lb,Brand C,2024-01-13 12:00:00,category3
+8096,Walmart,Milk,12.61,11.66,1.02,ea,Brand B,2024-01-13 13:00:00,category3
+5240,Galleria,Toast,9.37,17.04,0.11,g,Brand D,2024-01-13 14:00:00,category2
+9741,T&T,Milk,14.37,8.27,0.13,kg,Brand B,2024-01-13 15:00:00,category1
+3188,Walmart,Toast,10.11,15.46,1.27,lb,Brand C,2024-01-13 16:00:00,category1
+6176,T&T,Bacon,10.35,6.45,0.59,lb,Brand D,2024-01-13 17:00:00,category1
+4003,No Frills,Bacon,13.73,7.41,1.62,g,Brand C,2024-01-13 18:00:00,category2
+6472,No Frills,Brown Eggs,3.49,8.85,0.98,ea,Brand C,2024-01-13 19:00:00,category3
+8012,T&T,Brown Eggs,4.65,17.56,0.45,g,Brand C,2024-01-13 20:00:00,category1
+2124,Loblaws,Brown Eggs,8.87,5.76,1.65,lb,Brand D,2024-01-13 21:00:00,category3
+5497,T&T,Milk,3.92,9.52,0.77,kg,Brand C,2024-01-13 22:00:00,category1
+4119,Voila,Brown Eggs,14.67,4.16,1.08,lb,Brand A,2024-01-13 23:00:00,category1
+6756,Loblaws,Bacon,14.88,11.24,0.38,lb,Brand D,2024-01-14,category1
+2622,Save-On-Foods,Toast,14.58,9.43,1.59,kg,Brand D,2024-01-14 01:00:00,category3
+6770,T&T,Brown Eggs,8.42,13.08,1.15,g,Brand D,2024-01-14 02:00:00,category1
+3006,No Frills,Orange Juice,5.86,4.49,1.49,g,Brand C,2024-01-14 03:00:00,category3
+3308,Walmart,Bacon,6.15,3.51,1.06,g,Brand D,2024-01-14 04:00:00,category1
+2165,No Frills,Bacon,3.67,2.25,1.02,g,Brand D,2024-01-14 05:00:00,category1
+7698,Loblaws,Bacon,11.43,6.58,1.17,g,Brand A,2024-01-14 06:00:00,category3
+7028,T&T,Bacon,8.9,16.58,1.6,kg,Brand C,2024-01-14 07:00:00,category1
+7606,No Frills,Brown Eggs,9.05,18.85,1.39,g,Brand C,2024-01-14 08:00:00,category1
+2185,Save-On-Foods,Milk,12.48,5.38,1.33,lb,Brand C,2024-01-14 09:00:00,category1
+4952,Walmart,Brown Eggs,10.08,5.08,1.44,ea,Brand A,2024-01-14 10:00:00,category1
+1459,No Frills,Orange Juice,14.53,14.26,1.32,kg,Brand A,2024-01-14 11:00:00,category3
+2329,No Frills,Bacon,9.16,15.54,0.42,g,Brand D,2024-01-14 12:00:00,category2
+7043,No Frills,Toast,2.42,7.18,1.84,g,Brand C,2024-01-14 13:00:00,category1
+4644,No Frills,Milk,13.59,16.01,1.34,kg,Brand B,2024-01-14 14:00:00,category1
+3986,Galleria,Orange Juice,13.15,15.68,0.41,kg,Brand D,2024-01-14 15:00:00,category1
+8422,No Frills,Brown Eggs,11.15,14.75,0.98,ea,Brand C,2024-01-14 16:00:00,category2
+5867,T&T,Orange Juice,12.35,18.73,1.36,lb,Brand B,2024-01-14 17:00:00,category1
+9918,Loblaws,Bacon,7.34,5.67,1.77,lb,Brand C,2024-01-14 18:00:00,category1
+6049,Voila,Milk,6.37,4.11,0.6,ea,Brand C,2024-01-14 19:00:00,category3
+3235,T&T,Brown Eggs,11.96,14.86,1.34,g,Brand D,2024-01-14 20:00:00,category1
+9783,Voila,Toast,11.97,15.05,0.23,g,Brand C,2024-01-14 21:00:00,category1
+8709,T&T,Toast,3.82,19.66,0.61,g,Brand C,2024-01-14 22:00:00,category2
+4035,No Frills,Bacon,6.93,10.22,1.32,ea,Brand B,2024-01-14 23:00:00,category3
+3776,No Frills,Brown Eggs,12.46,12.55,0.66,kg,Brand C,2024-01-15,category1
+9950,Save-On-Foods,Milk,14.22,8.4,1.42,kg,Brand A,2024-01-15 01:00:00,category2
+6705,T&T,Toast,6.39,10.46,0.86,g,Brand A,2024-01-15 02:00:00,category3
+3770,Save-On-Foods,Bacon,4.73,15.73,1.08,lb,Brand C,2024-01-15 03:00:00,category3
+7785,T&T,Toast,3.02,6.45,0.6,g,Brand A,2024-01-15 04:00:00,category3
+3793,Loblaws,Toast,7.93,19.84,0.96,lb,Brand B,2024-01-15 05:00:00,category3
+7161,Save-On-Foods,Orange Juice,14.44,5.7,0.88,kg,Brand D,2024-01-15 06:00:00,category1
+4556,Walmart,Milk,7.03,19.62,0.94,g,Brand D,2024-01-15 07:00:00,category3
+2404,Loblaws,Brown Eggs,2.55,6.93,1.64,g,Brand B,2024-01-15 08:00:00,category2
+2683,Loblaws,Toast,11.26,18.66,0.99,kg,Brand A,2024-01-15 09:00:00,category3
+4565,Save-On-Foods,Brown Eggs,7.72,2.81,1.04,lb,Brand B,2024-01-15 10:00:00,category1
+8557,T&T,Orange Juice,11.39,15.76,1.45,ea,Brand D,2024-01-15 11:00:00,category2
+1518,Loblaws,Brown Eggs,3.06,9.28,0.52,kg,Brand D,2024-01-15 12:00:00,category3
+6452,Walmart,Orange Juice,12.88,2.86,1.62,ea,Brand C,2024-01-15 13:00:00,category3
+2082,Metro,Bacon,7.73,4.22,0.38,g,Brand B,2024-01-15 14:00:00,category1
+3808,Walmart,Brown Eggs,5.27,7.17,1.14,ea,Brand A,2024-01-15 15:00:00,category1
+2490,Save-On-Foods,Brown Eggs,10.22,16.58,1.9,g,Brand A,2024-01-15 16:00:00,category2
+9612,No Frills,Milk,14.05,7.73,0.67,lb,Brand C,2024-01-15 17:00:00,category1
+9470,Voila,Toast,8.23,17.48,0.75,lb,Brand A,2024-01-15 18:00:00,category3
+9667,Walmart,Toast,3.43,15.86,1.2,g,Brand A,2024-01-15 19:00:00,category1
+8168,Save-On-Foods,Brown Eggs,12.46,7.09,1.34,ea,Brand D,2024-01-15 20:00:00,category2
+8900,No Frills,Bacon,8.99,3.28,0.8,kg,Brand D,2024-01-15 21:00:00,category1
+4732,T&T,Orange Juice,4.79,4.25,0.85,kg,Brand C,2024-01-15 22:00:00,category2
+9216,Metro,Bacon,11.73,4.86,1.49,lb,Brand A,2024-01-15 23:00:00,category1
+3788,Loblaws,Milk,13.8,19.73,0.58,lb,Brand D,2024-01-16,category2
+2210,Walmart,Milk,13.76,15.83,1.35,kg,Brand B,2024-01-16 01:00:00,category2
+6266,Save-On-Foods,Brown Eggs,8.95,11.66,0.41,g,Brand A,2024-01-16 02:00:00,category3
+7495,Walmart,Toast,7.5,7.78,1.01,g,Brand C,2024-01-16 03:00:00,category3
+4173,Voila,Toast,5.5,10.84,0.75,kg,Brand C,2024-01-16 04:00:00,category1
+6287,T&T,Bacon,6.04,11.32,1.14,ea,Brand A,2024-01-16 05:00:00,category2
+6364,No Frills,Orange Juice,4.24,15.91,1.14,g,Brand C,2024-01-16 06:00:00,category3
+7667,Galleria,Toast,10.32,10.08,0.53,kg,Brand B,2024-01-16 07:00:00,category3
+8324,T&T,Brown Eggs,13.58,7.4,0.62,kg,Brand B,2024-01-16 08:00:00,category3
+7239,Save-On-Foods,Orange Juice,14.54,7.86,0.12,kg,Brand D,2024-01-16 09:00:00,category1
+6406,Metro,Toast,4.22,7.78,0.25,ea,Brand C,2024-01-16 10:00:00,category3
+5698,Walmart,Orange Juice,5.34,13.24,0.67,lb,Brand D,2024-01-16 11:00:00,category1
+5588,Walmart,Orange Juice,6.1,4.32,0.36,ea,Brand A,2024-01-16 12:00:00,category1
+3644,T&T,Bacon,3.96,12.5,1.34,g,Brand D,2024-01-16 13:00:00,category1
+5126,Walmart,Milk,6.46,11.89,1.59,kg,Brand A,2024-01-16 14:00:00,category3
+8873,Loblaws,Toast,6.41,8.16,1.45,ea,Brand B,2024-01-16 15:00:00,category2
+5041,Metro,Bacon,8.93,9.87,1.36,g,Brand C,2024-01-16 16:00:00,category2
+2143,Walmart,Toast,6.81,8.58,1.66,ea,Brand B,2024-01-16 17:00:00,category2
+4947,Galleria,Toast,12.04,16.93,1.22,kg,Brand B,2024-01-16 18:00:00,category2
+1979,Galleria,Milk,7.46,11.14,1.78,g,Brand D,2024-01-16 19:00:00,category2
+2804,Voila,Milk,12.51,7.29,1.49,lb,Brand D,2024-01-16 20:00:00,category2
+7496,T&T,Bacon,2.89,13.68,0.77,ea,Brand B,2024-01-16 21:00:00,category1
+7302,T&T,Toast,12.79,18.56,1.11,lb,Brand B,2024-01-16 22:00:00,category1
+7362,Voila,Orange Juice,3.49,9.54,1.88,lb,Brand D,2024-01-16 23:00:00,category3
+3079,No Frills,Milk,6.44,7.4,1.36,kg,Brand A,2024-01-17,category2
+5756,No Frills,Orange Juice,5.74,14.32,0.98,lb,Brand C,2024-01-17 01:00:00,category2
+4912,Walmart,Orange Juice,4.01,8.29,0.43,lb,Brand A,2024-01-17 02:00:00,category1
+4827,Save-On-Foods,Toast,11.6,5.98,1.05,lb,Brand A,2024-01-17 03:00:00,category3
+7477,Galleria,Milk,6.67,8.53,1.36,g,Brand D,2024-01-17 04:00:00,category2
+8347,Galleria,Toast,6.77,19.82,0.96,lb,Brand A,2024-01-17 05:00:00,category1
+6918,Loblaws,Milk,7.9,10.01,0.45,ea,Brand A,2024-01-17 06:00:00,category3
+2062,Metro,Bacon,12.49,3.38,1.69,kg,Brand B,2024-01-17 07:00:00,category2
+9851,Voila,Milk,10.9,5.1,0.82,kg,Brand D,2024-01-17 08:00:00,category2
+9623,No Frills,Bacon,8.22,2.2,0.44,ea,Brand B,2024-01-17 09:00:00,category3
+3914,Loblaws,Brown Eggs,14.65,4.07,0.37,lb,Brand A,2024-01-17 10:00:00,category3
+5098,Metro,Brown Eggs,3.66,5.39,1.16,g,Brand B,2024-01-17 11:00:00,category3
+9880,Save-On-Foods,Brown Eggs,11.67,9.35,0.13,lb,Brand A,2024-01-17 12:00:00,category2
+9378,Galleria,Milk,11.52,17.23,0.44,ea,Brand A,2024-01-17 13:00:00,category1
+4323,Metro,Toast,8.22,7.87,0.11,ea,Brand C,2024-01-17 14:00:00,category1
+2701,Loblaws,Orange Juice,10.5,15.21,1.05,ea,Brand A,2024-01-17 15:00:00,category1
+6357,Metro,Orange Juice,3.48,10.51,0.9,ea,Brand D,2024-01-17 16:00:00,category1
+2086,No Frills,Bacon,7.2,12.57,0.3,kg,Brand D,2024-01-17 17:00:00,category3
+2295,Save-On-Foods,Orange Juice,6.93,6.76,0.9,ea,Brand A,2024-01-17 18:00:00,category2
+9582,T&T,Milk,3.84,7.99,0.76,lb,Brand A,2024-01-17 19:00:00,category1
+6157,T&T,Orange Juice,14.14,3.81,1.69,g,Brand C,2024-01-17 20:00:00,category3
+6363,T&T,Brown Eggs,8.02,12.64,0.95,g,Brand A,2024-01-17 21:00:00,category3
+9423,T&T,Milk,12.35,16.54,1.29,g,Brand D,2024-01-17 22:00:00,category3
+5579,Save-On-Foods,Toast,4.15,18.64,1.77,kg,Brand A,2024-01-17 23:00:00,category3
+3230,Galleria,Orange Juice,13.59,9.71,1.81,kg,Brand D,2024-01-18,category1
+4241,Voila,Toast,12.75,3.37,1.49,kg,Brand D,2024-01-18 01:00:00,category3
+6815,Galleria,Brown Eggs,8.32,18.62,1.18,lb,Brand C,2024-01-18 02:00:00,category3
+5224,T&T,Toast,5.39,15,1.39,lb,Brand C,2024-01-18 03:00:00,category2
+4713,T&T,Orange Juice,10.22,9.8,0.66,g,Brand D,2024-01-18 04:00:00,category3
+7229,Voila,Brown Eggs,3.51,12.7,1.6,g,Brand C,2024-01-18 05:00:00,category3
+2701,Walmart,Orange Juice,12.17,18.54,1.82,g,Brand B,2024-01-18 06:00:00,category3
+7649,Save-On-Foods,Bacon,12.47,3.92,1.44,lb,Brand D,2024-01-18 07:00:00,category2
+5345,Metro,Bacon,2.09,19.39,0.38,ea,Brand C,2024-01-18 08:00:00,category3
+6784,T&T,Orange Juice,8.31,17.93,1.96,ea,Brand C,2024-01-18 09:00:00,category1
+8662,No Frills,Milk,4.9,19.33,0.9,kg,Brand D,2024-01-18 10:00:00,category2
+1951,Save-On-Foods,Orange Juice,2.96,12.35,0.63,ea,Brand D,2024-01-18 11:00:00,category2
+4496,Galleria,Toast,7.19,14.58,1.02,lb,Brand D,2024-01-18 12:00:00,category2
+3973,Metro,Bacon,9.65,6.29,0.55,ea,Brand C,2024-01-18 13:00:00,category2
+5900,Voila,Milk,6.04,17.24,1.21,g,Brand A,2024-01-18 14:00:00,category1
+3950,Metro,Toast,8.49,8.36,1.79,g,Brand C,2024-01-18 15:00:00,category3
+6474,Voila,Toast,6.52,6.78,0.4,kg,Brand B,2024-01-18 16:00:00,category2
+6659,T&T,Toast,3.99,9.11,1.86,kg,Brand D,2024-01-18 17:00:00,category1
+2455,Loblaws,Toast,13.29,16.1,0.71,g,Brand D,2024-01-18 18:00:00,category1
+3808,T&T,Brown Eggs,11.84,18.62,0.24,lb,Brand C,2024-01-18 19:00:00,category1
+6099,Galleria,Brown Eggs,6.03,16.7,0.26,g,Brand C,2024-01-18 20:00:00,category3
+5015,Walmart,Brown Eggs,5.38,6.81,1.92,ea,Brand C,2024-01-18 21:00:00,category2
+7689,Metro,Milk,14.25,19.92,1.76,lb,Brand A,2024-01-18 22:00:00,category1
+4388,Walmart,Toast,13.89,14.19,0.49,lb,Brand A,2024-01-18 23:00:00,category1
+4255,Walmart,Brown Eggs,7.49,3.52,1.28,lb,Brand B,2024-01-19,category2
+4304,Voila,Milk,6.85,8.71,1.71,g,Brand C,2024-01-19 01:00:00,category1
+7704,Save-On-Foods,Orange Juice,13.86,13.6,0.7,lb,Brand D,2024-01-19 02:00:00,category2
+1985,Save-On-Foods,Milk,11.55,15.34,1.23,g,Brand C,2024-01-19 03:00:00,category2
+9818,Galleria,Bacon,14.81,4.37,1.23,ea,Brand B,2024-01-19 04:00:00,category2
+5588,Metro,Milk,8.79,15.96,0.21,g,Brand C,2024-01-19 05:00:00,category2
+1729,Galleria,Orange Juice,6.98,19.33,0.38,kg,Brand A,2024-01-19 06:00:00,category2
+3277,Voila,Brown Eggs,2.31,12.95,0.29,kg,Brand D,2024-01-19 07:00:00,category2
+3312,Metro,Orange Juice,2.98,10.86,0.23,kg,Brand C,2024-01-19 08:00:00,category3
+8408,Galleria,Milk,5.29,11.29,1.01,lb,Brand D,2024-01-19 09:00:00,category1
+3392,Metro,Bacon,7.59,13.09,1.51,lb,Brand B,2024-01-19 10:00:00,category1
+3727,Voila,Milk,8.61,19.25,0.37,lb,Brand A,2024-01-19 11:00:00,category1
+8964,Metro,Orange Juice,4.34,9.77,1.56,g,Brand D,2024-01-19 12:00:00,category2
+6460,Voila,Milk,12.06,12.67,1.8,kg,Brand C,2024-01-19 13:00:00,category2
+7294,Save-On-Foods,Bacon,4.02,15.47,1.46,g,Brand B,2024-01-19 14:00:00,category1
+2034,Save-On-Foods,Orange Juice,3.93,16.25,1.03,g,Brand C,2024-01-19 15:00:00,category1
+9730,No Frills,Milk,13.4,18.24,0.7,kg,Brand A,2024-01-19 16:00:00,category1
+4983,Walmart,Bacon,4.78,7.47,1.94,g,Brand D,2024-01-19 17:00:00,category1
+2670,Voila,Bacon,10.94,2.01,1.17,lb,Brand A,2024-01-19 18:00:00,category2
+8338,Metro,Orange Juice,4.16,16.93,1.45,lb,Brand D,2024-01-19 19:00:00,category1
+4922,Save-On-Foods,Bacon,7.89,10.03,0.96,g,Brand D,2024-01-19 20:00:00,category3
+3350,T&T,Brown Eggs,6.98,18.78,0.68,lb,Brand D,2024-01-19 21:00:00,category2
+8721,No Frills,Bacon,8.84,7.91,1.31,lb,Brand C,2024-01-19 22:00:00,category3
+1120,Voila,Toast,7.66,4.95,1.71,kg,Brand C,2024-01-19 23:00:00,category1
+8471,Save-On-Foods,Toast,10.05,13.54,0.56,g,Brand C,2024-01-20,category3
+6283,T&T,Bacon,3.09,11.55,1.91,lb,Brand B,2024-01-20 01:00:00,category3
+5845,Metro,Orange Juice,7.6,5.52,0.48,kg,Brand A,2024-01-20 02:00:00,category2
+8920,Loblaws,Brown Eggs,7.93,2.3,1.37,ea,Brand B,2024-01-20 03:00:00,category2
+2465,Metro,Brown Eggs,6.05,2.72,0.58,lb,Brand C,2024-01-20 04:00:00,category2
+1622,Loblaws,Orange Juice,9.73,17.39,1.43,g,Brand C,2024-01-20 05:00:00,category1
+9098,T&T,Orange Juice,8.07,11.03,1.02,lb,Brand C,2024-01-20 06:00:00,category2
+3114,Walmart,Milk,7.48,11.77,1.38,ea,Brand A,2024-01-20 07:00:00,category2
+7283,Galleria,Brown Eggs,7.02,19.57,0.22,lb,Brand A,2024-01-20 08:00:00,category2
+5197,No Frills,Milk,9.82,9.54,0.46,ea,Brand C,2024-01-20 09:00:00,category3
+6980,Voila,Bacon,14.21,18.15,1.05,kg,Brand A,2024-01-20 10:00:00,category2
+5916,Walmart,Toast,2.29,17.36,1.07,g,Brand D,2024-01-20 11:00:00,category1
+8002,T&T,Milk,6.04,12.58,0.37,lb,Brand A,2024-01-20 12:00:00,category2
+9623,Walmart,Orange Juice,10.02,8.19,0.34,g,Brand D,2024-01-20 13:00:00,category2
+2600,Galleria,Bacon,5.62,13.03,0.8,kg,Brand D,2024-01-20 14:00:00,category1
+5109,No Frills,Milk,9.08,4.57,1.18,g,Brand B,2024-01-20 15:00:00,category2
+3508,Voila,Milk,4.07,10.57,0.21,kg,Brand D,2024-01-20 16:00:00,category1
+2252,Save-On-Foods,Milk,12.89,17.08,1.58,kg,Brand B,2024-01-20 17:00:00,category3
+1943,Loblaws,Orange Juice,13.06,17.34,0.77,kg,Brand B,2024-01-20 18:00:00,category3
+8497,No Frills,Orange Juice,9.4,3.51,0.26,lb,Brand A,2024-01-20 19:00:00,category2
+2573,T&T,Toast,10.6,19.08,0.61,lb,Brand A,2024-01-20 20:00:00,category1
+7455,Save-On-Foods,Toast,11.92,7.51,1.06,g,Brand A,2024-01-20 21:00:00,category1
+6235,Galleria,Orange Juice,2.2,19.07,1.9,ea,Brand B,2024-01-20 22:00:00,category3
+5577,T&T,Orange Juice,7.52,5.04,1.35,lb,Brand D,2024-01-20 23:00:00,category2
+6447,T&T,Brown Eggs,5.11,3.43,0.88,ea,Brand C,2024-01-21,category3
+2733,Loblaws,Orange Juice,7.86,17.45,0.89,lb,Brand A,2024-01-21 01:00:00,category1
+3796,Metro,Bacon,9.16,5.53,0.35,kg,Brand B,2024-01-21 02:00:00,category1
+4205,Save-On-Foods,Bacon,4.95,18.44,0.77,kg,Brand D,2024-01-21 03:00:00,category2
+6427,Metro,Bacon,9.65,18.42,0.86,kg,Brand A,2024-01-21 04:00:00,category2
+5368,Galleria,Milk,11.94,12.05,0.66,ea,Brand A,2024-01-21 05:00:00,category3
+3206,Loblaws,Toast,11.81,10.99,0.16,g,Brand B,2024-01-21 06:00:00,category2
+3270,Loblaws,Brown Eggs,8.4,9.15,0.69,lb,Brand B,2024-01-21 07:00:00,category1
+7920,Galleria,Milk,9.87,13.78,1.47,kg,Brand A,2024-01-21 08:00:00,category1
+8732,Save-On-Foods,Orange Juice,13.08,17.41,0.57,ea,Brand A,2024-01-21 09:00:00,category1
+1719,T&T,Toast,12.03,6.12,1.63,lb,Brand B,2024-01-21 10:00:00,category3
+8352,Save-On-Foods,Brown Eggs,8.73,3.65,1.99,lb,Brand B,2024-01-21 11:00:00,category1
+7565,Loblaws,Brown Eggs,11.13,14.6,1.24,kg,Brand B,2024-01-21 12:00:00,category1
+4872,T&T,Toast,4.18,16.06,1.63,kg,Brand A,2024-01-21 13:00:00,category3
+9261,Loblaws,Bacon,2.56,11.38,0.78,g,Brand D,2024-01-21 14:00:00,category2
+5481,T&T,Bacon,10.77,11.81,0.92,g,Brand D,2024-01-21 15:00:00,category1
+9576,T&T,Bacon,3.23,5.05,0.43,lb,Brand D,2024-01-21 16:00:00,category3
+9933,Save-On-Foods,Toast,11.17,6.63,1.76,g,Brand C,2024-01-21 17:00:00,category3
+3108,Loblaws,Toast,6.24,14.3,0.82,ea,Brand A,2024-01-21 18:00:00,category1
+8706,Metro,Bacon,8.86,15.7,1.06,g,Brand A,2024-01-21 19:00:00,category1
+9361,Walmart,Bacon,5.57,19.16,1.99,g,Brand C,2024-01-21 20:00:00,category2
+6270,Loblaws,Milk,5.27,7.9,1.88,ea,Brand B,2024-01-21 21:00:00,category1
+5205,Metro,Milk,14.08,14.01,1.85,kg,Brand C,2024-01-21 22:00:00,category1
+9636,Galleria,Toast,9.44,2.48,1.67,g,Brand C,2024-01-21 23:00:00,category2
+5415,Galleria,Bacon,11.18,12.81,1.54,g,Brand C,2024-01-22,category2
+1008,Voila,Milk,14.16,5.59,0.85,kg,Brand A,2024-01-22 01:00:00,category3
+2974,Voila,Milk,12.03,7.28,1.25,ea,Brand B,2024-01-22 02:00:00,category1
+3892,Save-On-Foods,Brown Eggs,14.44,6.33,0.33,ea,Brand C,2024-01-22 03:00:00,category2
+5307,T&T,Orange Juice,8.17,19.48,0.26,kg,Brand C,2024-01-22 04:00:00,category2
+4711,Galleria,Toast,3.24,17.15,1.84,lb,Brand C,2024-01-22 05:00:00,category1
+8701,T&T,Orange Juice,10.22,7.57,1.95,kg,Brand B,2024-01-22 06:00:00,category3
+4533,Walmart,Milk,5.12,11.77,1.63,ea,Brand C,2024-01-22 07:00:00,category2
+4165,Galleria,Milk,8.34,2.11,0.99,ea,Brand A,2024-01-22 08:00:00,category1
+1950,Save-On-Foods,Milk,14.55,15.68,1.19,lb,Brand B,2024-01-22 09:00:00,category2
+2831,Save-On-Foods,Brown Eggs,6.73,11.83,0.88,ea,Brand D,2024-01-22 10:00:00,category1
+3458,Galleria,Toast,5.37,4.13,1.15,g,Brand A,2024-01-22 11:00:00,category2
+7569,Voila,Bacon,5.19,13.39,0.1,lb,Brand D,2024-01-22 12:00:00,category2
+4369,Loblaws,Toast,5.55,17.71,0.12,g,Brand D,2024-01-22 13:00:00,category3
+6282,No Frills,Brown Eggs,4.63,8.81,0.8,lb,Brand D,2024-01-22 14:00:00,category3
+4658,Save-On-Foods,Orange Juice,5.42,17.75,1.96,kg,Brand C,2024-01-22 15:00:00,category1
+4279,Voila,Toast,11.17,16.66,0.4,g,Brand C,2024-01-22 16:00:00,category3
+5750,Voila,Milk,2.41,15.01,0.43,kg,Brand D,2024-01-22 17:00:00,category3
+9590,T&T,Toast,4.14,8.66,1.44,lb,Brand C,2024-01-22 18:00:00,category1
+9410,Voila,Bacon,4.58,16.13,0.83,kg,Brand D,2024-01-22 19:00:00,category3
+9397,No Frills,Toast,9.06,17.76,0.53,lb,Brand B,2024-01-22 20:00:00,category2
+8835,Metro,Milk,12.14,17.34,0.48,lb,Brand D,2024-01-22 21:00:00,category3
+7147,Save-On-Foods,Brown Eggs,11.98,16.87,0.99,lb,Brand A,2024-01-22 22:00:00,category2
+3403,Voila,Milk,4.38,2.6,1.61,ea,Brand B,2024-01-22 23:00:00,category1
+5879,Loblaws,Bacon,5.24,19.68,0.91,lb,Brand C,2024-01-23,category1
+3329,Save-On-Foods,Milk,12.46,10.65,0.26,ea,Brand D,2024-01-23 01:00:00,category1
+1790,Galleria,Bacon,13.22,11.52,1.74,ea,Brand C,2024-01-23 02:00:00,category1
+4853,Save-On-Foods,Brown Eggs,5.48,16.16,1.21,ea,Brand C,2024-01-23 03:00:00,category2
+3526,Loblaws,Bacon,8.71,6.69,1.52,g,Brand B,2024-01-23 04:00:00,category3
+1541,Voila,Brown Eggs,6.36,2.23,0.43,g,Brand B,2024-01-23 05:00:00,category1
+4411,Galleria,Bacon,13.9,15.27,0.83,g,Brand A,2024-01-23 06:00:00,category2
+1637,Voila,Milk,9.01,14.49,0.69,kg,Brand C,2024-01-23 07:00:00,category1
+6225,Metro,Toast,10.79,13.33,1.11,lb,Brand C,2024-01-23 08:00:00,category3
+4743,Metro,Bacon,2.46,16.68,0.51,ea,Brand C,2024-01-23 09:00:00,category3
+3099,Walmart,Brown Eggs,11,6.32,0.23,lb,Brand D,2024-01-23 10:00:00,category1
+2443,Save-On-Foods,Milk,5.75,16.94,1.15,lb,Brand D,2024-01-23 11:00:00,category3
+6002,Save-On-Foods,Orange Juice,13.07,10,0.8,g,Brand C,2024-01-23 12:00:00,category2
+8942,Walmart,Bacon,9.28,6.87,1.52,ea,Brand C,2024-01-23 13:00:00,category3
+4701,Galleria,Orange Juice,13.87,17.91,1.81,kg,Brand A,2024-01-23 14:00:00,category3
+1048,Loblaws,Bacon,7.25,4.99,1.64,ea,Brand B,2024-01-23 15:00:00,category2
+9899,Voila,Toast,6.44,12.5,0.85,kg,Brand A,2024-01-23 16:00:00,category1
+7398,No Frills,Milk,14.09,16.92,0.64,lb,Brand C,2024-01-23 17:00:00,category1
+9482,T&T,Milk,8.43,2.48,0.63,lb,Brand A,2024-01-23 18:00:00,category2
+4015,No Frills,Milk,14.14,16.05,1.35,lb,Brand C,2024-01-23 19:00:00,category2
+6024,Voila,Orange Juice,10.74,19.43,1.24,ea,Brand C,2024-01-23 20:00:00,category1
+2157,Walmart,Toast,8.34,2.07,1.61,lb,Brand C,2024-01-23 21:00:00,category2
+7898,Voila,Orange Juice,4.72,13.48,1.68,lb,Brand A,2024-01-23 22:00:00,category3
+2529,T&T,Milk,3.74,6.38,0.34,lb,Brand A,2024-01-23 23:00:00,category1
+4392,Metro,Brown Eggs,13.9,15.01,0.36,g,Brand A,2024-01-24,category2
+6031,Save-On-Foods,Milk,13.55,12.42,1.79,lb,Brand B,2024-01-24 01:00:00,category1
+5156,Loblaws,Brown Eggs,5.45,3.67,1.34,g,Brand B,2024-01-24 02:00:00,category1
+2509,T&T,Milk,2.63,2.23,0.77,g,Brand D,2024-01-24 03:00:00,category2
+1147,Metro,Toast,5.71,4.62,0.96,g,Brand D,2024-01-24 04:00:00,category3
+6748,Galleria,Orange Juice,3.11,4.48,0.31,lb,Brand A,2024-01-24 05:00:00,category1
+6491,Save-On-Foods,Bacon,6.69,14.6,0.8,g,Brand D,2024-01-24 06:00:00,category1
+2742,Walmart,Bacon,11.94,13.75,1.75,g,Brand A,2024-01-24 07:00:00,category3
+7597,Galleria,Brown Eggs,8.29,10.1,1.11,g,Brand C,2024-01-24 08:00:00,category1
+1870,Walmart,Bacon,10.04,12.23,1.92,lb,Brand C,2024-01-24 09:00:00,category2
+8562,No Frills,Milk,14.46,4.19,1.76,lb,Brand A,2024-01-24 10:00:00,category2
+4745,Galleria,Toast,13.73,12.17,0.4,kg,Brand B,2024-01-24 11:00:00,category1
+7885,Voila,Brown Eggs,11.26,18.87,1.52,g,Brand B,2024-01-24 12:00:00,category3
+4861,Walmart,Bacon,5.48,5.37,0.88,ea,Brand D,2024-01-24 13:00:00,category2
+1024,Voila,Milk,8.36,6.02,0.87,ea,Brand B,2024-01-24 14:00:00,category2
+1723,Galleria,Milk,6.84,11.69,0.33,kg,Brand C,2024-01-24 15:00:00,category1
+8717,Save-On-Foods,Bacon,2.27,13.78,1.7,ea,Brand A,2024-01-24 16:00:00,category1
+3723,Save-On-Foods,Milk,3.05,5.32,0.67,g,Brand A,2024-01-24 17:00:00,category1
+9760,Save-On-Foods,Orange Juice,3.53,9.5,0.33,g,Brand B,2024-01-24 18:00:00,category2
+7404,Loblaws,Milk,9.38,17.19,0.18,lb,Brand A,2024-01-24 19:00:00,category3
+4137,No Frills,Toast,4.19,13.29,1.22,ea,Brand D,2024-01-24 20:00:00,category1
+2610,Save-On-Foods,Toast,6.77,17.51,0.69,g,Brand A,2024-01-24 21:00:00,category1
+3337,No Frills,Brown Eggs,12.05,18.85,1.13,lb,Brand C,2024-01-24 22:00:00,category3
+7384,Walmart,Brown Eggs,12.39,3.09,1.52,lb,Brand B,2024-01-24 23:00:00,category1
+9364,Walmart,Milk,14.61,15,0.58,kg,Brand A,2024-01-25,category1
+1343,Voila,Toast,2.63,5.26,1.61,ea,Brand A,2024-01-25 01:00:00,category3
+2922,Galleria,Brown Eggs,6.92,5.71,0.45,ea,Brand D,2024-01-25 02:00:00,category2
+1222,Loblaws,Bacon,12.72,12.32,1.51,g,Brand D,2024-01-25 03:00:00,category3
+1877,Voila,Brown Eggs,13.06,17.45,1.18,ea,Brand B,2024-01-25 04:00:00,category3
+8449,Walmart,Milk,6.18,3.97,1.91,kg,Brand A,2024-01-25 05:00:00,category2
+9906,Galleria,Bacon,13.09,6.62,0.86,ea,Brand D,2024-01-25 06:00:00,category1
+3226,Loblaws,Brown Eggs,5.76,11.55,1.04,g,Brand B,2024-01-25 07:00:00,category1
+5499,Save-On-Foods,Toast,13.28,18.22,1.69,g,Brand D,2024-01-25 08:00:00,category2
+5184,No Frills,Bacon,10.47,11.19,0.8,kg,Brand B,2024-01-25 09:00:00,category3
+6417,Voila,Bacon,7.01,19.73,1.14,lb,Brand D,2024-01-25 10:00:00,category1
+5398,Voila,Toast,12.09,6.21,1.55,kg,Brand A,2024-01-25 11:00:00,category2
+9089,Loblaws,Bacon,11.73,2.1,1.83,g,Brand A,2024-01-25 12:00:00,category3
+8548,T&T,Bacon,10.64,6.64,1.61,lb,Brand C,2024-01-25 13:00:00,category1
+2481,Save-On-Foods,Milk,6.79,4.76,1.32,kg,Brand A,2024-01-25 14:00:00,category2
+3878,Voila,Toast,14.83,19.39,1.06,kg,Brand A,2024-01-25 15:00:00,category3
+3245,Walmart,Toast,14.61,3.38,1.8,g,Brand B,2024-01-25 16:00:00,category1
+5261,Loblaws,Bacon,8.22,3.06,0.97,lb,Brand D,2024-01-25 17:00:00,category3
+9226,No Frills,Milk,11.74,13.48,0.84,kg,Brand A,2024-01-25 18:00:00,category3
+9949,Walmart,Milk,6.45,11.55,0.72,kg,Brand C,2024-01-25 19:00:00,category2
+4006,Metro,Toast,13.79,8.37,1.55,g,Brand C,2024-01-25 20:00:00,category3
+5103,No Frills,Orange Juice,12.6,8.68,1.84,lb,Brand A,2024-01-25 21:00:00,category3
+9514,Metro,Orange Juice,7.97,9.21,0.23,lb,Brand B,2024-01-25 22:00:00,category1
+1112,T&T,Brown Eggs,10.47,13.42,1.66,ea,Brand D,2024-01-25 23:00:00,category1
+4951,Save-On-Foods,Brown Eggs,5.88,2.77,0.63,kg,Brand B,2024-01-26,category2
+2893,Metro,Toast,9.04,6.99,1.71,kg,Brand A,2024-01-26 01:00:00,category2
+5706,Save-On-Foods,Brown Eggs,12.42,2.33,0.39,lb,Brand D,2024-01-26 02:00:00,category1
+2608,Voila,Brown Eggs,9.44,6.16,0.23,lb,Brand C,2024-01-26 03:00:00,category1
+1204,T&T,Brown Eggs,12.44,11.72,1.31,ea,Brand C,2024-01-26 04:00:00,category1
+6738,Galleria,Toast,9.7,11.76,1.37,g,Brand A,2024-01-26 05:00:00,category3
+1906,Voila,Brown Eggs,5.66,12.15,0.96,ea,Brand C,2024-01-26 06:00:00,category1
+9027,Walmart,Toast,14.72,15.79,0.89,ea,Brand D,2024-01-26 07:00:00,category1
+3037,No Frills,Milk,13.25,14.95,1.08,lb,Brand C,2024-01-26 08:00:00,category1
+4293,Galleria,Brown Eggs,14.86,3.24,1.17,ea,Brand A,2024-01-26 09:00:00,category1
+5509,Save-On-Foods,Milk,5.42,16.6,0.82,lb,Brand D,2024-01-26 10:00:00,category2
+8701,No Frills,Bacon,6.56,8.31,0.64,lb,Brand B,2024-01-26 11:00:00,category3
+9458,No Frills,Bacon,11.94,5.81,1.59,lb,Brand D,2024-01-26 12:00:00,category2
+6392,T&T,Bacon,9.11,12.86,1.85,ea,Brand D,2024-01-26 13:00:00,category3
+8048,Voila,Brown Eggs,12.62,8.42,0.33,lb,Brand C,2024-01-26 14:00:00,category1
+3263,Galleria,Milk,5.28,9.63,1.75,kg,Brand A,2024-01-26 15:00:00,category3
+9523,Save-On-Foods,Brown Eggs,7.4,13.09,0.61,g,Brand D,2024-01-26 16:00:00,category3
+4716,No Frills,Milk,10.21,19.48,0.65,kg,Brand B,2024-01-26 17:00:00,category2
+2157,Walmart,Toast,8.29,11.18,1.89,g,Brand B,2024-01-26 18:00:00,category1
+6137,Walmart,Bacon,6.04,3.54,0.45,lb,Brand B,2024-01-26 19:00:00,category3
+2185,Walmart,Orange Juice,9.27,5.47,1.87,g,Brand B,2024-01-26 20:00:00,category3
+3473,Walmart,Orange Juice,14.23,13.39,1.49,ea,Brand C,2024-01-26 21:00:00,category3
+3953,No Frills,Milk,12.95,5.95,0.66,lb,Brand D,2024-01-26 22:00:00,category2
+4201,Walmart,Milk,10.7,13.4,0.48,kg,Brand C,2024-01-26 23:00:00,category1
+1431,Walmart,Brown Eggs,7.32,17.14,0.97,lb,Brand C,2024-01-27,category2
+7845,Save-On-Foods,Brown Eggs,7.56,4.68,1.2,lb,Brand C,2024-01-27 01:00:00,category2
+7816,Voila,Toast,14.06,15.68,1.09,kg,Brand B,2024-01-27 02:00:00,category2
+7736,No Frills,Orange Juice,3.97,3.71,0.25,g,Brand D,2024-01-27 03:00:00,category1
+4894,Loblaws,Bacon,3.72,18.33,1.84,lb,Brand A,2024-01-27 04:00:00,category2
+9419,Galleria,Bacon,5.37,3.46,1.46,kg,Brand A,2024-01-27 05:00:00,category2
+5845,Metro,Bacon,7.83,2.54,1.93,ea,Brand C,2024-01-27 06:00:00,category2
+1520,Metro,Brown Eggs,7.83,3.49,1.03,lb,Brand A,2024-01-27 07:00:00,category3
+1519,Voila,Brown Eggs,6.1,15.33,0.32,kg,Brand C,2024-01-27 08:00:00,category3
+4620,Galleria,Toast,7.98,5.64,1.53,lb,Brand A,2024-01-27 09:00:00,category3
+5678,Save-On-Foods,Toast,7.39,6.57,1.9,kg,Brand D,2024-01-27 10:00:00,category1
+6457,Loblaws,Milk,9.59,6.97,0.82,lb,Brand A,2024-01-27 11:00:00,category2
+8492,Galleria,Toast,3.13,8.99,1.17,ea,Brand C,2024-01-27 12:00:00,category3
+1443,Save-On-Foods,Brown Eggs,7.51,15.76,1.86,lb,Brand C,2024-01-27 13:00:00,category2
+7039,Save-On-Foods,Milk,9.16,4.62,0.16,g,Brand D,2024-01-27 14:00:00,category2
+9165,T&T,Bacon,9.55,18.82,1.34,g,Brand B,2024-01-27 15:00:00,category1
+7422,Walmart,Toast,10.53,16.48,1.96,kg,Brand B,2024-01-27 16:00:00,category3
+3246,T&T,Orange Juice,6.72,13.89,0.28,ea,Brand B,2024-01-27 17:00:00,category1
+6869,Metro,Toast,14.42,3.05,0.39,kg,Brand B,2024-01-27 18:00:00,category3
+9541,No Frills,Bacon,5.39,18.15,0.71,lb,Brand C,2024-01-27 19:00:00,category3
+1504,Voila,Milk,12.61,3.65,0.24,g,Brand A,2024-01-27 20:00:00,category1
+3606,Voila,Brown Eggs,7.69,16.11,0.34,ea,Brand B,2024-01-27 21:00:00,category3
+7686,Galleria,Brown Eggs,3.75,14.51,0.32,kg,Brand D,2024-01-27 22:00:00,category2
+8540,Voila,Milk,11.96,18.06,0.88,kg,Brand D,2024-01-27 23:00:00,category3
+9289,Metro,Milk,4.86,15.08,0.57,g,Brand D,2024-01-28,category3
+3675,Voila,Orange Juice,13.75,9.85,0.35,ea,Brand B,2024-01-28 01:00:00,category2
+1699,No Frills,Brown Eggs,12.59,2.6,0.11,ea,Brand C,2024-01-28 02:00:00,category3
+5871,Save-On-Foods,Bacon,8.29,6.95,1.28,ea,Brand B,2024-01-28 03:00:00,category3
+7239,T&T,Orange Juice,8.84,6.04,1.79,lb,Brand D,2024-01-28 04:00:00,category1
+3993,T&T,Toast,6.37,6.14,0.73,g,Brand D,2024-01-28 05:00:00,category3
+7440,Walmart,Toast,5.47,4.17,1.38,kg,Brand B,2024-01-28 06:00:00,category3
+5967,No Frills,Milk,12.3,2.09,0.53,kg,Brand B,2024-01-28 07:00:00,category2
+7239,Save-On-Foods,Orange Juice,14.85,17.2,0.33,kg,Brand D,2024-01-28 08:00:00,category2
+6720,Save-On-Foods,Milk,4.78,14.56,0.61,kg,Brand B,2024-01-28 09:00:00,category1
+8623,Walmart,Bacon,11.07,16.15,1.54,ea,Brand A,2024-01-28 10:00:00,category1
+7851,Save-On-Foods,Orange Juice,9.68,10.19,1.02,lb,Brand C,2024-01-28 11:00:00,category3
+1855,Save-On-Foods,Toast,7.43,8.02,1.68,lb,Brand D,2024-01-28 12:00:00,category3
+9872,Voila,Orange Juice,5.86,9.89,0.78,lb,Brand C,2024-01-28 13:00:00,category2
+1773,Loblaws,Orange Juice,4.52,5.22,1.08,kg,Brand B,2024-01-28 14:00:00,category3
+3833,Walmart,Toast,3.43,8.36,0.46,kg,Brand C,2024-01-28 15:00:00,category2
+3750,T&T,Bacon,6.58,10.12,1.75,kg,Brand A,2024-01-28 16:00:00,category1
+9469,No Frills,Brown Eggs,5.91,2.33,0.53,ea,Brand B,2024-01-28 17:00:00,category3
+8097,Save-On-Foods,Orange Juice,14.53,8.18,1.1,kg,Brand C,2024-01-28 18:00:00,category2
+7965,No Frills,Orange Juice,2.21,10.94,0.85,g,Brand D,2024-01-28 19:00:00,category1
+1720,Save-On-Foods,Toast,11.86,5,0.74,g,Brand A,2024-01-28 20:00:00,category2
+5107,T&T,Milk,13.94,14.73,0.31,lb,Brand C,2024-01-28 21:00:00,category1
+8413,T&T,Toast,2.01,18.98,1.4,lb,Brand B,2024-01-28 22:00:00,category1
+1036,Voila,Milk,5.14,2.54,1.42,kg,Brand A,2024-01-28 23:00:00,category3
+3210,Metro,Brown Eggs,12.78,16.26,0.32,kg,Brand A,2024-01-29,category1
+6443,Loblaws,Orange Juice,8.29,5.77,0.44,ea,Brand A,2024-01-29 01:00:00,category2
+5663,No Frills,Toast,3.3,13.91,1.12,lb,Brand D,2024-01-29 02:00:00,category2
+1997,Metro,Bacon,2.08,16.57,1.83,lb,Brand A,2024-01-29 03:00:00,category2
+2280,Metro,Milk,11.86,14.76,1.31,kg,Brand B,2024-01-29 04:00:00,category2
+2723,Galleria,Milk,8.58,14.25,0.17,ea,Brand D,2024-01-29 05:00:00,category1
+6501,Galleria,Orange Juice,2.34,4.53,1.94,kg,Brand B,2024-01-29 06:00:00,category1
+8529,T&T,Milk,2.84,4.39,1.78,g,Brand B,2024-01-29 07:00:00,category2
+6403,Metro,Bacon,5.8,5.84,0.63,kg,Brand B,2024-01-29 08:00:00,category2
+8012,Galleria,Bacon,3.06,7.63,0.65,lb,Brand A,2024-01-29 09:00:00,category1
+5686,Galleria,Bacon,4.04,15.79,1.12,kg,Brand A,2024-01-29 10:00:00,category1
+6205,Walmart,Toast,9.03,19.25,0.38,ea,Brand B,2024-01-29 11:00:00,category2
+9422,Voila,Milk,9.22,16.67,1.84,kg,Brand A,2024-01-29 12:00:00,category3
+7240,T&T,Bacon,11.06,17.69,1.71,kg,Brand C,2024-01-29 13:00:00,category1
+9778,Walmart,Brown Eggs,11.16,15.63,0.31,lb,Brand A,2024-01-29 14:00:00,category1
+7306,Metro,Orange Juice,10.2,12.19,0.51,kg,Brand A,2024-01-29 15:00:00,category1
+4370,T&T,Bacon,6.96,4.4,0.93,lb,Brand B,2024-01-29 16:00:00,category3
+6205,Metro,Brown Eggs,11.57,14.72,0.17,ea,Brand A,2024-01-29 17:00:00,category1
+9137,Save-On-Foods,Brown Eggs,9.85,8.09,1.34,g,Brand C,2024-01-29 18:00:00,category1
+8515,Save-On-Foods,Bacon,5.01,10.49,1.28,kg,Brand B,2024-01-29 19:00:00,category1
+9326,Save-On-Foods,Brown Eggs,4.4,12.39,0.95,kg,Brand B,2024-01-29 20:00:00,category1
+6652,Voila,Toast,9.93,8.73,1.51,kg,Brand D,2024-01-29 21:00:00,category1
+5992,No Frills,Orange Juice,8.34,3.58,0.99,g,Brand C,2024-01-29 22:00:00,category2
+6254,No Frills,Brown Eggs,11.61,13.46,0.49,kg,Brand A,2024-01-29 23:00:00,category3
+3556,Voila,Brown Eggs,4.25,4.85,1.36,lb,Brand B,2024-01-30,category2
+3396,No Frills,Bacon,11.52,16.01,0.79,ea,Brand C,2024-01-30 01:00:00,category1
+7914,Walmart,Bacon,6.09,6.79,1.37,kg,Brand B,2024-01-30 02:00:00,category3
+3724,Loblaws,Toast,10.21,2.46,1.89,g,Brand D,2024-01-30 03:00:00,category2
+1411,Galleria,Toast,3.12,14.45,1.35,g,Brand C,2024-01-30 04:00:00,category2
+1611,Save-On-Foods,Milk,10.41,11.88,1.99,ea,Brand A,2024-01-30 05:00:00,category2
+8405,Metro,Toast,13.96,14.73,1.45,g,Brand B,2024-01-30 06:00:00,category2
+3747,Voila,Toast,2.37,2.62,1.27,g,Brand A,2024-01-30 07:00:00,category1
+3882,Metro,Orange Juice,14.13,19.74,1,ea,Brand D,2024-01-30 08:00:00,category2
+4352,Save-On-Foods,Bacon,5.54,8.49,1.94,ea,Brand D,2024-01-30 09:00:00,category2
+6781,No Frills,Bacon,13.62,6.34,0.38,ea,Brand D,2024-01-30 10:00:00,category2
+2165,T&T,Bacon,14.08,17.29,0.6,lb,Brand D,2024-01-30 11:00:00,category1
+3614,Walmart,Bacon,2.48,4.96,1.57,ea,Brand C,2024-01-30 12:00:00,category2
+7804,Voila,Bacon,4.15,5.53,1.79,kg,Brand A,2024-01-30 13:00:00,category1
+8137,Loblaws,Brown Eggs,10.13,7.29,1.95,ea,Brand A,2024-01-30 14:00:00,category1
+9866,Walmart,Bacon,5.34,14.87,0.74,lb,Brand D,2024-01-30 15:00:00,category2
+5773,Metro,Brown Eggs,10.99,15.57,0.23,lb,Brand D,2024-01-30 16:00:00,category1
+9674,No Frills,Orange Juice,13.33,18.49,0.84,kg,Brand D,2024-01-30 17:00:00,category2
+7029,Voila,Brown Eggs,14.5,6.01,1.7,ea,Brand A,2024-01-30 18:00:00,category1
+4206,Galleria,Orange Juice,3.49,7.22,0.4,ea,Brand D,2024-01-30 19:00:00,category2
+1190,Metro,Orange Juice,11.8,4.58,1.45,lb,Brand B,2024-01-30 20:00:00,category3
+8656,T&T,Milk,6.11,14.48,0.38,ea,Brand A,2024-01-30 21:00:00,category2
+4592,T&T,Orange Juice,7.04,2.31,0.36,g,Brand A,2024-01-30 22:00:00,category2
+4885,T&T,Orange Juice,10.87,14.93,0.8,kg,Brand D,2024-01-30 23:00:00,category1
+8937,Save-On-Foods,Bacon,6.95,19.85,0.22,g,Brand D,2024-01-31,category1
+7540,Save-On-Foods,Brown Eggs,10.03,18.47,0.52,kg,Brand D,2024-01-31 01:00:00,category3
+7362,Save-On-Foods,Brown Eggs,10.99,16.34,1.12,g,Brand B,2024-01-31 02:00:00,category1
+9085,Metro,Brown Eggs,5.38,6.47,1.01,kg,Brand C,2024-01-31 03:00:00,category2
+5084,Galleria,Toast,5.69,12.73,1.27,kg,Brand D,2024-01-31 04:00:00,category3
+4062,T&T,Bacon,7.24,9.9,0.47,ea,Brand B,2024-01-31 05:00:00,category2
+6904,T&T,Orange Juice,12.86,3.65,0.17,g,Brand A,2024-01-31 06:00:00,category2
+8296,Save-On-Foods,Brown Eggs,10.1,16.43,1.71,kg,Brand D,2024-01-31 07:00:00,category1
+6143,Loblaws,Milk,8.32,10.98,0.62,ea,Brand B,2024-01-31 08:00:00,category1
+8254,Galleria,Brown Eggs,14.18,12.39,1.56,ea,Brand D,2024-01-31 09:00:00,category3
+8088,Galleria,Milk,11.66,19.04,0.24,g,Brand B,2024-01-31 10:00:00,category2
+3085,Voila,Milk,8.07,15.97,0.67,g,Brand D,2024-01-31 11:00:00,category2
+7664,Metro,Bacon,6.06,3.1,0.82,ea,Brand A,2024-01-31 12:00:00,category3
+4651,Loblaws,Toast,4.6,7.66,1.05,g,Brand D,2024-01-31 13:00:00,category2
+6305,Galleria,Orange Juice,3.18,17.09,0.96,ea,Brand B,2024-01-31 14:00:00,category2
+7473,Voila,Brown Eggs,10.95,4.18,1.73,ea,Brand C,2024-01-31 15:00:00,category3
+7976,Voila,Milk,10.08,7.27,0.67,g,Brand A,2024-01-31 16:00:00,category2
+6385,T&T,Bacon,6.07,19.27,1.28,lb,Brand B,2024-01-31 17:00:00,category3
+7099,Walmart,Milk,3.51,8.09,0.81,lb,Brand C,2024-01-31 18:00:00,category1
+8257,Walmart,Milk,11.18,2.99,0.82,kg,Brand C,2024-01-31 19:00:00,category3
+6171,Galleria,Brown Eggs,4.51,6.35,0.38,g,Brand C,2024-01-31 20:00:00,category3
+9370,Walmart,Bacon,14.07,15.56,1.65,g,Brand B,2024-01-31 21:00:00,category1
+8470,Walmart,Milk,8.46,11.8,0.47,kg,Brand A,2024-01-31 22:00:00,category2
+8088,Galleria,Bacon,7.15,9.68,0.98,lb,Brand B,2024-01-31 23:00:00,category1
+6266,Galleria,Toast,7.5,9.78,0.85,lb,Brand D,2024-02-01,category3
+3024,Metro,Orange Juice,10.1,9.31,1.81,g,Brand A,2024-02-01 01:00:00,category3
+1798,Galleria,Bacon,12.93,5.78,1.49,ea,Brand A,2024-02-01 02:00:00,category2
+3135,No Frills,Toast,6.72,12.15,1.74,g,Brand B,2024-02-01 03:00:00,category2
+4471,Voila,Bacon,6.72,16.96,0.28,g,Brand C,2024-02-01 04:00:00,category1
+9495,No Frills,Bacon,8.6,5.5,0.67,lb,Brand D,2024-02-01 05:00:00,category3
+3403,Metro,Toast,5.09,17.99,1.3,kg,Brand C,2024-02-01 06:00:00,category1
+1423,Walmart,Orange Juice,2.57,8.1,1.26,kg,Brand B,2024-02-01 07:00:00,category3
+6126,Save-On-Foods,Toast,13.33,19.14,1.28,g,Brand A,2024-02-01 08:00:00,category1
+8810,Metro,Toast,14.15,2.26,0.75,ea,Brand D,2024-02-01 09:00:00,category1
+6822,Galleria,Bacon,8.23,5.09,0.58,lb,Brand B,2024-02-01 10:00:00,category1
+9592,No Frills,Brown Eggs,8.81,5.41,0.4,g,Brand D,2024-02-01 11:00:00,category3
+1073,Save-On-Foods,Bacon,5.29,18.8,1.43,g,Brand D,2024-02-01 12:00:00,category2
+2965,Metro,Milk,3.58,15.45,1.31,kg,Brand D,2024-02-01 13:00:00,category3
+1351,Save-On-Foods,Toast,14.45,7.54,1.48,ea,Brand D,2024-02-01 14:00:00,category1
+6874,No Frills,Milk,11.51,14.14,1.83,lb,Brand C,2024-02-01 15:00:00,category2
+3601,Loblaws,Orange Juice,4.25,18.82,0.22,lb,Brand D,2024-02-01 16:00:00,category1
+6504,T&T,Toast,14.94,7.91,1,kg,Brand B,2024-02-01 17:00:00,category1
+3873,T&T,Toast,9.82,12.61,0.82,kg,Brand C,2024-02-01 18:00:00,category3
+2178,Save-On-Foods,Orange Juice,9.95,13.82,0.34,kg,Brand A,2024-02-01 19:00:00,category2
+5527,No Frills,Toast,10.89,12.9,1.33,ea,Brand B,2024-02-01 20:00:00,category2
+4515,Voila,Milk,10.53,12.43,1.33,lb,Brand B,2024-02-01 21:00:00,category1
+1630,Voila,Bacon,10.2,13.31,1.65,g,Brand A,2024-02-01 22:00:00,category3
+4264,Walmart,Toast,13.48,2.75,1.17,g,Brand C,2024-02-01 23:00:00,category3
+7684,Walmart,Brown Eggs,9.7,18.35,0.84,g,Brand B,2024-02-02,category2
+7098,Voila,Bacon,10.34,19.02,1.13,ea,Brand A,2024-02-02 01:00:00,category2
+6425,No Frills,Bacon,2.7,19.27,0.34,ea,Brand A,2024-02-02 02:00:00,category3
+8762,Metro,Orange Juice,10.18,12.19,1.41,g,Brand A,2024-02-02 03:00:00,category2
+1804,Save-On-Foods,Toast,2.36,9.91,0.29,ea,Brand C,2024-02-02 04:00:00,category2
+2334,Loblaws,Milk,3.19,7.71,1.98,g,Brand B,2024-02-02 05:00:00,category3
+5502,Loblaws,Toast,4.16,7.36,1.48,ea,Brand A,2024-02-02 06:00:00,category3
+1266,No Frills,Milk,4.17,18.85,0.21,ea,Brand D,2024-02-02 07:00:00,category2
+1854,Save-On-Foods,Orange Juice,6.74,6.41,0.73,lb,Brand C,2024-02-02 08:00:00,category3
+7484,Galleria,Milk,6.86,8.86,1.74,ea,Brand B,2024-02-02 09:00:00,category3
+5151,Galleria,Brown Eggs,5.34,5.18,0.96,g,Brand D,2024-02-02 10:00:00,category1
+7495,Metro,Brown Eggs,5.54,2.78,1.62,ea,Brand A,2024-02-02 11:00:00,category3
+7665,Walmart,Brown Eggs,8.26,7.64,0.88,g,Brand A,2024-02-02 12:00:00,category1
+8329,Loblaws,Brown Eggs,11.21,7.65,0.48,g,Brand C,2024-02-02 13:00:00,category3
+2215,T&T,Bacon,9.33,4.98,1.02,kg,Brand C,2024-02-02 14:00:00,category2
+8598,Galleria,Toast,10.23,11.41,1.59,g,Brand A,2024-02-02 15:00:00,category1
+2239,Voila,Bacon,12.36,13.71,1.07,g,Brand A,2024-02-02 16:00:00,category1
+3416,Walmart,Brown Eggs,7.84,13.25,1.7,g,Brand A,2024-02-02 17:00:00,category2
+5234,Metro,Bacon,8.38,11.48,1.34,g,Brand C,2024-02-02 18:00:00,category2
+9891,Voila,Toast,13.2,6.81,0.51,lb,Brand A,2024-02-02 19:00:00,category1
+6302,Loblaws,Bacon,5.12,8.71,1.83,kg,Brand D,2024-02-02 20:00:00,category2
+1876,Metro,Milk,6.52,16.55,0.49,lb,Brand C,2024-02-02 21:00:00,category3
+5084,T&T,Bacon,9.75,13.34,0.24,g,Brand B,2024-02-02 22:00:00,category1
+6281,Walmart,Bacon,8.45,12.21,0.69,ea,Brand C,2024-02-02 23:00:00,category3
+6209,Galleria,Toast,10.69,14.44,1.61,g,Brand D,2024-02-03,category2
+3984,Metro,Bacon,9.96,14.14,0.55,ea,Brand A,2024-02-03 01:00:00,category2
+2883,No Frills,Brown Eggs,13.37,8.6,1.46,g,Brand D,2024-02-03 02:00:00,category2
+6241,Metro,Toast,12.99,15.45,0.57,lb,Brand A,2024-02-03 03:00:00,category1
+1248,Walmart,Milk,14.69,15.09,0.11,lb,Brand C,2024-02-03 04:00:00,category3
+8813,No Frills,Orange Juice,9.22,7.32,1.26,ea,Brand A,2024-02-03 05:00:00,category3
+7980,Loblaws,Milk,12.84,7.99,1.4,lb,Brand D,2024-02-03 06:00:00,category3
+6586,No Frills,Orange Juice,14.21,9.13,0.58,g,Brand B,2024-02-03 07:00:00,category3
+6504,Metro,Toast,3.02,15.73,1.85,ea,Brand D,2024-02-03 08:00:00,category2
+4997,Save-On-Foods,Milk,13.29,6.24,1.95,lb,Brand D,2024-02-03 09:00:00,category3
+5925,Voila,Orange Juice,3.42,5.57,0.74,ea,Brand C,2024-02-03 10:00:00,category2
+5021,No Frills,Milk,10.64,13.32,1.72,kg,Brand B,2024-02-03 11:00:00,category2
+5058,Galleria,Milk,13.81,6.31,0.66,ea,Brand A,2024-02-03 12:00:00,category2
+9750,No Frills,Brown Eggs,6.42,11.51,1.77,kg,Brand D,2024-02-03 13:00:00,category3
+8166,No Frills,Milk,11.72,3.29,1.01,kg,Brand B,2024-02-03 14:00:00,category3
+3720,Walmart,Bacon,13.2,9.31,1.32,lb,Brand A,2024-02-03 15:00:00,category3
+6769,Voila,Toast,11.16,15.87,0.28,kg,Brand B,2024-02-03 16:00:00,category3
+8018,Save-On-Foods,Milk,6.84,11.35,0.21,ea,Brand A,2024-02-03 17:00:00,category1
+9057,Galleria,Brown Eggs,9.77,9.28,1.79,kg,Brand B,2024-02-03 18:00:00,category1
+8187,No Frills,Toast,9.37,5.32,1.61,kg,Brand B,2024-02-03 19:00:00,category1
+2183,Loblaws,Brown Eggs,14.44,10.04,0.64,g,Brand D,2024-02-03 20:00:00,category1
+9709,Walmart,Milk,4.34,12.95,0.35,ea,Brand D,2024-02-03 21:00:00,category1
+9563,Loblaws,Brown Eggs,8.84,6.08,0.31,lb,Brand B,2024-02-03 22:00:00,category3
+9804,Voila,Milk,4.89,9.72,0.45,lb,Brand B,2024-02-03 23:00:00,category3
+3507,T&T,Toast,10.61,7.14,0.7,lb,Brand B,2024-02-04,category3
+4665,Loblaws,Toast,11.33,10.76,1.08,ea,Brand A,2024-02-04 01:00:00,category2
+7287,Metro,Milk,5.12,15.29,1.88,g,Brand D,2024-02-04 02:00:00,category2
+3695,Metro,Brown Eggs,7.06,2.24,1.36,g,Brand D,2024-02-04 03:00:00,category3
+3190,Metro,Brown Eggs,2.63,14.16,0.41,lb,Brand B,2024-02-04 04:00:00,category2
+2155,T&T,Toast,7.14,10.72,0.5,ea,Brand B,2024-02-04 05:00:00,category3
+6185,Save-On-Foods,Brown Eggs,2.31,12.98,1.2,kg,Brand B,2024-02-04 06:00:00,category3
+6150,T&T,Brown Eggs,2.04,6.16,1.29,lb,Brand A,2024-02-04 07:00:00,category1
+3957,Metro,Bacon,3.37,8.58,1.15,ea,Brand B,2024-02-04 08:00:00,category1
+8917,No Frills,Brown Eggs,7.28,7.6,0.19,g,Brand B,2024-02-04 09:00:00,category1
+3102,Galleria,Toast,12.13,3.96,0.67,lb,Brand B,2024-02-04 10:00:00,category2
+4354,Walmart,Brown Eggs,10.64,9.74,0.65,g,Brand D,2024-02-04 11:00:00,category2
+2657,Voila,Orange Juice,13.94,19.71,0.37,lb,Brand C,2024-02-04 12:00:00,category1
+5355,Save-On-Foods,Toast,8.27,17.14,1.08,kg,Brand C,2024-02-04 13:00:00,category1
+9650,Voila,Brown Eggs,12.84,14.89,0.69,lb,Brand D,2024-02-04 14:00:00,category2
+6391,Galleria,Milk,4.09,5.15,1.93,lb,Brand A,2024-02-04 15:00:00,category1
+7113,Voila,Brown Eggs,7.89,3.16,1.41,g,Brand C,2024-02-04 16:00:00,category3
+4576,No Frills,Orange Juice,12.2,3.97,0.35,g,Brand A,2024-02-04 17:00:00,category1
+8785,Voila,Toast,5.61,19.57,0.16,ea,Brand D,2024-02-04 18:00:00,category1
+7169,Loblaws,Brown Eggs,9.77,6.88,1.12,lb,Brand B,2024-02-04 19:00:00,category1
+3468,Walmart,Toast,8.79,8.1,1.69,g,Brand A,2024-02-04 20:00:00,category1
+6104,Loblaws,Brown Eggs,7.57,9.17,1.45,lb,Brand C,2024-02-04 21:00:00,category1
+2330,Save-On-Foods,Milk,12.7,16.32,1.85,g,Brand D,2024-02-04 22:00:00,category3
+6171,Galleria,Brown Eggs,11.1,19.57,0.96,kg,Brand C,2024-02-04 23:00:00,category3
+2143,Walmart,Toast,14.59,17.72,0.71,g,Brand C,2024-02-05,category2
+6139,Metro,Toast,12.47,9.86,1.08,lb,Brand A,2024-02-05 01:00:00,category3
+4807,Walmart,Orange Juice,4.34,16.4,1.51,g,Brand D,2024-02-05 02:00:00,category2
+7156,Walmart,Milk,5.28,5.4,1.26,lb,Brand A,2024-02-05 03:00:00,category2
+3672,Walmart,Milk,2.08,3.08,0.65,g,Brand D,2024-02-05 04:00:00,category1
+4542,No Frills,Brown Eggs,3.51,18.33,1.02,lb,Brand D,2024-02-05 05:00:00,category3
+6181,Loblaws,Bacon,13.2,19.68,1.65,lb,Brand D,2024-02-05 06:00:00,category1
+7500,Voila,Toast,6.93,18.35,0.3,g,Brand C,2024-02-05 07:00:00,category3
+3622,Save-On-Foods,Orange Juice,3.22,5.8,1.11,g,Brand B,2024-02-05 08:00:00,category2
+5191,T&T,Brown Eggs,5.47,8.23,0.32,ea,Brand C,2024-02-05 09:00:00,category2
+9733,Metro,Bacon,7.93,8.22,0.82,kg,Brand D,2024-02-05 10:00:00,category2
+6630,T&T,Brown Eggs,12.3,16.94,0.62,g,Brand A,2024-02-05 11:00:00,category3
+3807,No Frills,Bacon,13.88,13.54,1.7,kg,Brand B,2024-02-05 12:00:00,category1
+4601,Metro,Brown Eggs,13.67,9.32,0.69,lb,Brand B,2024-02-05 13:00:00,category1
+8375,Metro,Toast,4.17,10.05,1.88,g,Brand B,2024-02-05 14:00:00,category1
+2379,Voila,Milk,4.41,6.46,0.21,g,Brand D,2024-02-05 15:00:00,category2
+2269,Voila,Orange Juice,11.84,4.13,1.02,g,Brand B,2024-02-05 16:00:00,category2
+3774,Walmart,Toast,7.91,9.08,0.12,g,Brand C,2024-02-05 17:00:00,category1
+7770,Loblaws,Orange Juice,11.11,16.17,1.55,g,Brand D,2024-02-05 18:00:00,category1
+5847,Loblaws,Orange Juice,11.62,18.7,0.66,g,Brand A,2024-02-05 19:00:00,category3
+6162,Loblaws,Bacon,13.42,3.91,1.09,ea,Brand B,2024-02-05 20:00:00,category3
+2723,Voila,Bacon,7.93,16.12,1.48,kg,Brand C,2024-02-05 21:00:00,category2
+7930,Walmart,Milk,11,14.63,0.35,ea,Brand C,2024-02-05 22:00:00,category3
+2849,Galleria,Brown Eggs,3.92,6.21,0.13,ea,Brand C,2024-02-05 23:00:00,category3
+7789,Save-On-Foods,Bacon,8.64,7.4,1,ea,Brand B,2024-02-06,category1
+2023,T&T,Toast,11.7,12.22,0.56,lb,Brand C,2024-02-06 01:00:00,category2
+6075,Walmart,Brown Eggs,10.35,13.5,1.92,kg,Brand C,2024-02-06 02:00:00,category2
+6913,Loblaws,Orange Juice,2.5,2.54,1.08,g,Brand A,2024-02-06 03:00:00,category1
+4209,Save-On-Foods,Toast,13.72,3.74,1.7,g,Brand A,2024-02-06 04:00:00,category3
+7005,Walmart,Bacon,5.06,15.89,1.53,kg,Brand D,2024-02-06 05:00:00,category2
+7146,Walmart,Orange Juice,14.3,7.72,0.37,kg,Brand C,2024-02-06 06:00:00,category3
+2205,Galleria,Toast,14.74,16.75,0.95,ea,Brand C,2024-02-06 07:00:00,category3
+6916,Metro,Toast,10.13,4.28,0.63,lb,Brand A,2024-02-06 08:00:00,category1
+4640,Galleria,Orange Juice,14.32,7.2,0.78,g,Brand B,2024-02-06 09:00:00,category2
+6747,Metro,Bacon,11.7,14.83,1.29,kg,Brand C,2024-02-06 10:00:00,category3
+7065,Voila,Bacon,12.47,12.05,1.19,g,Brand D,2024-02-06 11:00:00,category2
+8988,Voila,Toast,9.69,14.07,0.6,lb,Brand C,2024-02-06 12:00:00,category2
+3747,No Frills,Toast,6.73,10.19,1.15,ea,Brand D,2024-02-06 13:00:00,category2
+7962,Metro,Bacon,12.08,19.12,1.99,ea,Brand B,2024-02-06 14:00:00,category1
+6602,No Frills,Toast,11.09,16.57,1.44,g,Brand A,2024-02-06 15:00:00,category2
+3608,Metro,Bacon,3.36,12.7,1.81,ea,Brand C,2024-02-06 16:00:00,category2
+5097,Loblaws,Orange Juice,5.15,18.69,1.57,g,Brand C,2024-02-06 17:00:00,category3
+7236,Walmart,Bacon,10.48,2.89,0.95,lb,Brand A,2024-02-06 18:00:00,category2
+9166,Walmart,Brown Eggs,3.09,14.08,0.14,ea,Brand B,2024-02-06 19:00:00,category1
+9352,T&T,Brown Eggs,5.6,2.13,1.52,g,Brand B,2024-02-06 20:00:00,category3
+9314,T&T,Orange Juice,6.6,2.74,0.57,ea,Brand C,2024-02-06 21:00:00,category1
+8000,T&T,Brown Eggs,7.09,18.99,1.11,kg,Brand A,2024-02-06 22:00:00,category2
+6393,Save-On-Foods,Bacon,9.56,2.04,1.09,ea,Brand A,2024-02-06 23:00:00,category3
+1348,Walmart,Orange Juice,2.86,13.47,0.14,kg,Brand A,2024-02-07,category3
+5108,Loblaws,Orange Juice,7.12,19.18,1.28,kg,Brand C,2024-02-07 01:00:00,category2
+5325,T&T,Toast,14.09,14.06,1.21,kg,Brand C,2024-02-07 02:00:00,category2
+3775,Voila,Toast,14.38,8.63,1.7,ea,Brand C,2024-02-07 03:00:00,category1
+9922,Metro,Orange Juice,3.67,14.69,1.64,lb,Brand B,2024-02-07 04:00:00,category2
+6026,Loblaws,Toast,11.43,7.36,1.22,lb,Brand A,2024-02-07 05:00:00,category1
+5999,Walmart,Milk,5.7,10.37,0.33,g,Brand B,2024-02-07 06:00:00,category3
+6801,T&T,Milk,14.66,12.18,0.44,kg,Brand B,2024-02-07 07:00:00,category1
+1866,Metro,Brown Eggs,11.52,11.77,1.22,ea,Brand C,2024-02-07 08:00:00,category1
+7729,Voila,Toast,11.54,16.28,0.14,kg,Brand C,2024-02-07 09:00:00,category1
+3848,No Frills,Brown Eggs,2.2,13.62,1.31,ea,Brand D,2024-02-07 10:00:00,category3
+9888,Save-On-Foods,Bacon,13.63,8.57,0.86,kg,Brand D,2024-02-07 11:00:00,category3
+5101,Galleria,Brown Eggs,3.22,7.93,0.24,kg,Brand C,2024-02-07 12:00:00,category3
+2553,Loblaws,Milk,4.66,15.58,1.51,g,Brand D,2024-02-07 13:00:00,category1
+1797,T&T,Toast,2.39,7.17,1.09,g,Brand A,2024-02-07 14:00:00,category3
+6154,Walmart,Toast,12.22,8.79,1.6,g,Brand B,2024-02-07 15:00:00,category1
+7354,Voila,Bacon,8.43,5.66,0.72,ea,Brand D,2024-02-07 16:00:00,category1
+2490,Galleria,Brown Eggs,7.84,17.31,1.7,ea,Brand A,2024-02-07 17:00:00,category2
+4025,Save-On-Foods,Toast,7.16,6.35,1.07,lb,Brand B,2024-02-07 18:00:00,category2
+3651,Loblaws,Bacon,10.58,5.51,1.33,lb,Brand B,2024-02-07 19:00:00,category2
+7539,Galleria,Milk,12.21,3.66,0.39,g,Brand A,2024-02-07 20:00:00,category2
+8124,Loblaws,Toast,3.42,8.51,0.72,kg,Brand D,2024-02-07 21:00:00,category3
+4892,Voila,Orange Juice,12.7,18.67,0.9,lb,Brand B,2024-02-07 22:00:00,category1
+5331,No Frills,Milk,7.37,10.57,0.74,ea,Brand C,2024-02-07 23:00:00,category2
+9213,Walmart,Milk,6.89,17.52,0.17,lb,Brand B,2024-02-08,category2
+2353,No Frills,Orange Juice,4.4,14.11,0.68,kg,Brand C,2024-02-08 01:00:00,category2
+7317,Metro,Orange Juice,5.06,18.38,0.11,kg,Brand B,2024-02-08 02:00:00,category2
+9324,No Frills,Milk,12.96,13.33,0.36,kg,Brand B,2024-02-08 03:00:00,category2
+9863,Metro,Bacon,6.01,19,1.94,kg,Brand C,2024-02-08 04:00:00,category2
+9842,No Frills,Toast,12.24,4.24,0.93,g,Brand C,2024-02-08 05:00:00,category1
+1207,Galleria,Toast,8.26,4.72,1.1,ea,Brand B,2024-02-08 06:00:00,category3
+1228,Galleria,Milk,11.04,3.19,1.03,kg,Brand A,2024-02-08 07:00:00,category3
+4625,Metro,Milk,14.05,4.41,1.38,lb,Brand A,2024-02-08 08:00:00,category3
+8058,Walmart,Orange Juice,8.46,4.06,0.81,g,Brand B,2024-02-08 09:00:00,category3
+6011,No Frills,Orange Juice,3.39,5.63,0.44,kg,Brand A,2024-02-08 10:00:00,category2
+8962,Voila,Orange Juice,4.18,12.5,1.31,g,Brand A,2024-02-08 11:00:00,category2
+2164,Walmart,Brown Eggs,13.2,15.96,0.99,g,Brand A,2024-02-08 12:00:00,category3
+6002,Loblaws,Milk,14.21,5.66,0.96,g,Brand A,2024-02-08 13:00:00,category3
+9112,Voila,Toast,8.13,5.48,0.84,ea,Brand D,2024-02-08 14:00:00,category3
+2521,No Frills,Orange Juice,4.22,14.33,1.1,ea,Brand A,2024-02-08 15:00:00,category2
+9508,Voila,Orange Juice,5.11,17.04,0.49,kg,Brand C,2024-02-08 16:00:00,category2
+9767,Walmart,Orange Juice,5.38,19.91,1.69,g,Brand B,2024-02-08 17:00:00,category3
+4903,T&T,Toast,9.46,10.62,1.14,kg,Brand A,2024-02-08 18:00:00,category1
+6135,Metro,Milk,9.43,15.17,0.55,g,Brand B,2024-02-08 19:00:00,category3
+6534,Metro,Toast,8.88,17.48,0.95,lb,Brand A,2024-02-08 20:00:00,category3
+8885,No Frills,Orange Juice,6.99,11.56,1.01,kg,Brand A,2024-02-08 21:00:00,category2
+1756,Save-On-Foods,Bacon,11.18,7.65,1.87,ea,Brand D,2024-02-08 22:00:00,category2
+2175,Metro,Orange Juice,11.87,15.57,1.02,g,Brand A,2024-02-08 23:00:00,category3
+9849,Loblaws,Milk,10.54,16.4,0.65,lb,Brand D,2024-02-09,category1
+5617,T&T,Bacon,5.18,11.94,1.54,g,Brand B,2024-02-09 01:00:00,category3
+3162,Loblaws,Toast,6.26,7.26,1.82,lb,Brand C,2024-02-09 02:00:00,category3
+1509,T&T,Orange Juice,14.63,5.35,0.91,kg,Brand B,2024-02-09 03:00:00,category3
+7310,Loblaws,Toast,7.83,7.72,2,kg,Brand A,2024-02-09 04:00:00,category2
+9718,Galleria,Orange Juice,2.13,4.45,0.34,ea,Brand D,2024-02-09 05:00:00,category1
+5659,Metro,Brown Eggs,6.31,18.26,0.92,ea,Brand D,2024-02-09 06:00:00,category1
+2753,Galleria,Milk,13.38,11.06,1.34,kg,Brand B,2024-02-09 07:00:00,category1
+8637,Walmart,Milk,3.84,6.76,1.63,kg,Brand B,2024-02-09 08:00:00,category2
+9345,Metro,Toast,11.08,17.46,1.52,lb,Brand A,2024-02-09 09:00:00,category3
+5905,Save-On-Foods,Orange Juice,9.11,4.31,0.19,lb,Brand B,2024-02-09 10:00:00,category2
+7264,Loblaws,Brown Eggs,4.66,19.97,0.75,kg,Brand A,2024-02-09 11:00:00,category1
+4354,Metro,Orange Juice,6.28,13.08,1.9,g,Brand D,2024-02-09 12:00:00,category2
+5488,Loblaws,Bacon,12.28,14.2,1.09,ea,Brand B,2024-02-09 13:00:00,category2
+3195,Loblaws,Brown Eggs,4.33,3.1,1.52,g,Brand B,2024-02-09 14:00:00,category3
+6436,Metro,Orange Juice,8.38,16.57,0.68,lb,Brand D,2024-02-09 15:00:00,category1
+5913,Voila,Brown Eggs,11.09,12.67,0.78,g,Brand A,2024-02-09 16:00:00,category2
+9604,Loblaws,Bacon,8.56,16.45,1.42,kg,Brand B,2024-02-09 17:00:00,category3
+2029,Metro,Brown Eggs,4.11,9.78,0.25,lb,Brand A,2024-02-09 18:00:00,category2
+7888,T&T,Bacon,3.4,13.33,0.2,ea,Brand B,2024-02-09 19:00:00,category2
+4802,T&T,Bacon,3.35,4.92,1.52,g,Brand A,2024-02-09 20:00:00,category2
+7058,Loblaws,Brown Eggs,13.91,17.16,1.67,lb,Brand A,2024-02-09 21:00:00,category3
+5972,Metro,Milk,11.47,14.89,1.67,g,Brand C,2024-02-09 22:00:00,category1
+1118,Metro,Brown Eggs,8.75,6.55,0.25,lb,Brand A,2024-02-09 23:00:00,category1
+8374,Loblaws,Brown Eggs,5.29,6.07,0.99,ea,Brand C,2024-02-10,category1
+8066,Walmart,Orange Juice,8.56,2.15,1.43,kg,Brand D,2024-02-10 01:00:00,category1
+4940,Walmart,Toast,5.62,4.63,0.19,lb,Brand C,2024-02-10 02:00:00,category2
+7274,Walmart,Milk,9.14,7.65,1.33,g,Brand B,2024-02-10 03:00:00,category3
+2065,T&T,Toast,8.56,17.95,0.82,g,Brand B,2024-02-10 04:00:00,category2
+3496,Voila,Milk,11.78,10.47,1.22,lb,Brand A,2024-02-10 05:00:00,category2
+6809,Save-On-Foods,Toast,8.02,10.64,1.39,lb,Brand C,2024-02-10 06:00:00,category1
+9446,Save-On-Foods,Orange Juice,4.19,6.16,1.85,ea,Brand D,2024-02-10 07:00:00,category3
+4452,Save-On-Foods,Toast,10.11,19.31,1.18,ea,Brand D,2024-02-10 08:00:00,category2
+3045,Loblaws,Bacon,6.14,8.58,0.92,lb,Brand A,2024-02-10 09:00:00,category1
+6472,Walmart,Brown Eggs,14.5,7.18,0.18,ea,Brand C,2024-02-10 10:00:00,category1
+9471,Save-On-Foods,Milk,13.22,19.47,1.6,ea,Brand D,2024-02-10 11:00:00,category2
+6474,Walmart,Milk,3.83,16.83,1.49,lb,Brand B,2024-02-10 12:00:00,category2
+7649,Galleria,Orange Juice,11.51,8.31,0.77,lb,Brand B,2024-02-10 13:00:00,category2
+4528,Voila,Milk,12.81,15.67,1.21,kg,Brand C,2024-02-10 14:00:00,category2
+1437,Save-On-Foods,Toast,5.61,12.43,1.91,kg,Brand C,2024-02-10 15:00:00,category1
+8457,Galleria,Brown Eggs,12.88,18.86,0.35,lb,Brand B,2024-02-10 16:00:00,category3
+5285,T&T,Orange Juice,7.64,2.19,0.49,ea,Brand A,2024-02-10 17:00:00,category2
+7418,T&T,Orange Juice,11.49,9.81,0.2,lb,Brand D,2024-02-10 18:00:00,category2
+2159,Galleria,Bacon,7.73,15.92,0.65,kg,Brand A,2024-02-10 19:00:00,category1
+2646,Save-On-Foods,Bacon,5.71,11.23,0.5,lb,Brand A,2024-02-10 20:00:00,category3
+1177,Voila,Orange Juice,14.69,13.76,1.58,kg,Brand B,2024-02-10 21:00:00,category2
+9574,Walmart,Orange Juice,4.03,19.5,1.32,kg,Brand D,2024-02-10 22:00:00,category3
+6966,Voila,Orange Juice,7.81,5.03,0.73,ea,Brand D,2024-02-10 23:00:00,category1
+8775,T&T,Milk,12.96,16.99,0.2,ea,Brand B,2024-02-11,category2
+7818,Metro,Bacon,10.04,11.98,0.74,ea,Brand C,2024-02-11 01:00:00,category1
+3988,Walmart,Toast,6.01,13.98,1.17,lb,Brand A,2024-02-11 02:00:00,category1
+4133,Save-On-Foods,Brown Eggs,11.18,14.06,0.36,g,Brand A,2024-02-11 03:00:00,category1
+3852,Loblaws,Bacon,10.35,14.44,1.52,kg,Brand C,2024-02-11 04:00:00,category3
+2752,No Frills,Milk,5.48,18.36,1.54,g,Brand D,2024-02-11 05:00:00,category2
+2280,T&T,Bacon,10.92,4.09,1.59,ea,Brand D,2024-02-11 06:00:00,category1
+3824,Voila,Orange Juice,6.83,17.04,1.4,g,Brand A,2024-02-11 07:00:00,category3
+2802,Voila,Orange Juice,2.16,10.88,0.64,kg,Brand C,2024-02-11 08:00:00,category1
+6533,Save-On-Foods,Brown Eggs,3.55,15.14,0.56,kg,Brand A,2024-02-11 09:00:00,category1
+6290,No Frills,Orange Juice,3.43,9.77,1.5,kg,Brand B,2024-02-11 10:00:00,category3
+2120,Save-On-Foods,Bacon,4.32,12.98,1.8,lb,Brand A,2024-02-11 11:00:00,category1
+2276,Voila,Toast,6.16,9.37,1.63,kg,Brand D,2024-02-11 12:00:00,category1
+5986,Save-On-Foods,Toast,4.89,4.95,1.87,g,Brand B,2024-02-11 13:00:00,category2
+7318,T&T,Bacon,4.28,19.38,1.05,lb,Brand D,2024-02-11 14:00:00,category3
+7504,Loblaws,Bacon,2.67,6.55,0.11,kg,Brand B,2024-02-11 15:00:00,category3

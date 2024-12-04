@@ -1,26 +1,25 @@
 #### Preamble ####
-# Purpose: Downloads and saves the data from [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Downloads and saves the data from Jacbo Filipp Project Hammer 
+# Author: Jason Yang
+# Date: 26 November 2024 
+# Contact: jzc.yang@mail.utoronto.ca 
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: Need to have the data downloaded from https://jacobfilipp.com/hammer/ and saved locally. 
+# Any other information needed? None
 
 
 #### Workspace setup ####
-library(opendatatoronto)
 library(tidyverse)
-# [...UPDATE THIS...]
-
-#### Download data ####
-# [...ADD CODE HERE TO DOWNLOAD...]
-
+library(arrow)
 
 
 #### Save data ####
-# [...UPDATE THIS...]
-# change the_raw_data to whatever name you assigned when you downloaded it.
-write_csv(the_raw_data, "inputs/data/raw_data.csv") 
+grocery_product <- read.csv('data/01-raw_data/hammer-4-product.csv')
+grocery_raw <- read.csv('data/01-raw_data/hammer-4-raw.csv')
+                        
+
+
+write_parquet(grocery_product, "data/01-raw_data/grocery_product.parquet")
+write_parquet(grocery_raw, "data/01-raw_data/grocery_raw.parquet")
 
          

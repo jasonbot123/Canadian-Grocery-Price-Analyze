@@ -14,39 +14,27 @@ library(tidyverse)
 set.seed(853)
 
 
-#### Simulate data ####
-# State names
-states <- c(
-  "New South Wales",
-  "Victoria",
-  "Queensland",
-  "South Australia",
-  "Western Australia",
-  "Tasmania",
-  "Northern Territory",
-  "Australian Capital Territory"
-)
+# Define the vendors
+vendors <- c("Voila", "T&T", "Loblaws", "No Frills", "Metro", "Galleria", "Walmart", "Save-On-Foods")
 
-# Political parties
-parties <- c("Labor", "Liberal", "Greens", "National", "Other")
+# Number of rows to simulate
+n_rows <- 1000
 
-# Create a dataset by randomly assigning states and parties to divisions
-analysis_data <- tibble(
-  division = paste("Division", 1:151),  # Add "Division" to make it a character
-  state = sample(
-    states,
-    size = 151,
-    replace = TRUE,
-    prob = c(0.25, 0.25, 0.15, 0.1, 0.1, 0.1, 0.025, 0.025) # Rough state population distribution
-  ),
-  party = sample(
-    parties,
-    size = 151,
-    replace = TRUE,
-    prob = c(0.40, 0.40, 0.05, 0.1, 0.05) # Rough party distribution
-  )
+# Generate simulated data
+simulated_data <- data.frame(
+  product_id = sample(1000:9999, n_rows, replace = TRUE),
+  vendor = sample(vendors, n_rows, replace = TRUE),
+  product_name = sample(c("Brown Eggs", "Bacon", "Toast", "Milk", "Orange Juice"), n_rows, replace = TRUE),
+  current_price = round(runif(n_rows, 2, 15), 2),
+  old_price = round(runif(n_rows, 2, 20), 2),
+  price_per_unit = round(runif(n_rows, 0.1, 2), 2),
+  units = sample(c("kg", "g", "lb", "ea"), n_rows, replace = TRUE),
+  brand = sample(c("Brand A", "Brand B", "Brand C", "Brand D"), n_rows, replace = TRUE),
+  nowtime = as.character(seq(ymd_hms("2024-01-01 00:00:00"), by = "hour", length.out = n_rows)),
+  concatted = sample(c("category1", "category2", "category3"), n_rows, replace = TRUE)
 )
 
 
 #### Save data ####
-write_csv(analysis_data, "data/00-simulated_data/simulated_data.csv")
+write_csv(simulated_data, "data/00-simulated_data/simulated_data.csv")
+
