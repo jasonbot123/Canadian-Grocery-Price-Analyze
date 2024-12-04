@@ -4,7 +4,7 @@
 
 This repository contains the analysis of grocery prices for breakfast staples—bacon, brown eggs, and bagels—collected from eight major Canadian grocery vendors. The study aims to identify which vendor offers the lowest prices, the most frequent discounts, and how pricing strategies vary across vendors. This analysis was conducted as part of Project Hammer, a broader initiative to foster competition and reduce potential collusion in the Canadian grocery sector.
 
-The originaldata is available here: https://jacobfilipp.com/hammer/
+The originaldata is available here: [Project Hammer](https://jacobfilipp.com/hammer/).
 ## File Structure
 
 The repo is structured as:
@@ -22,6 +22,6 @@ The code in this repository was partially developed with the assistance of ChatG
 
 ## Instructions 
 
-1. Download the download the Canadian Grocery Data from https://jacobfilipp.com/hammer/ before running the scripts for the simulation and cleaning process.
+1. Download the download the Canadian Grocery Data from [Project Hammer](https://jacobfilipp.com/hammer/) before running the scripts for the simulation and cleaning process.
 2. Use the cleaned data in `data/02-analysis_data` for statistical analysis and summary statistics. 3
 3. To generate the final paper, use the Quarto document (`paper.qmd`) in the `paper/` directory. The document can be rendered to PDF to produce a complete report of the analysis.
