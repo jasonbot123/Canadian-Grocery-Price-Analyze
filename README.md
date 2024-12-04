@@ -20,3 +20,8 @@ The repo is structured as:
 
 The code in this repository was partially developed with the assistance of ChatGPT-4o. Specifically, the LLM was consulted during the data simulation process, for assistance with visualizations, and for refining some modeling approaches. Detailed transcripts of interactions with ChatGPT-4o are available in other/llm_usage. These records ensure transparency regarding the contributions of AI to this project.
 
+## Instructions 
+
+1. Download the download the Canadian Grocery Data from https://jacobfilipp.com/hammer/ before running the scripts for the simulation and cleaning process.
+2. Use the cleaned data in `data/02-analysis_data` for statistical analysis and summary statistics. 3
+3. To generate the final paper, use the Quarto document (`paper.qmd`) in the `paper/` directory. The document can be rendered to PDF to produce a complete report of the analysis.
