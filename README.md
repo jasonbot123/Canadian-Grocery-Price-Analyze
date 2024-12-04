@@ -1,4 +1,4 @@
-# Starter folder
+# Unpacking Breakfast: A Vendor-Based Analysis of Bacon, Eggs, and Bagels
 
 ## Overview
 
